@@ -12,8 +12,8 @@
 #import "MyQuestionsViewController.h"
 #import "ProfileViewController.h"
 
-CGFloat const kBurgerMenuOpenScreenDivider = 100.0;
-CGFloat const kBurgerMenuOpenScreenMultiplier = 0.8;
+CGFloat const kBurgerMenuOpenScreenDivider = 3.0;
+CGFloat const kBurgerMenuOpenScreenMultiplier = 2.0;
 CGFloat const kBurgerButtonWidth = 40.0;
 CGFloat const kBurgerButtonHeight = 40.0;
 NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
@@ -35,7 +35,11 @@ NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setUpViewControllers];
+    
+    [self setUpMenuButton];
+    [self setUpPanGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,11 +51,9 @@ NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
     [self setUpSearchViewController];
     [self setUpMyQuestionsViewController];
     [self setUpProfileViewController];
-    self.viewControllers = @[self.searchViewController, self.questionsViewController, self.profileViewController];
     self.topViewController = self.searchViewController;
+    self.viewControllers = @[self.searchViewController, self.questionsViewController, self.profileViewController];
     
-    [self setUpMenuButton];
-    [self setUpPanGestureRecognizer];
 }
 
 - (void)setUpMenuViewController {
@@ -75,31 +77,25 @@ NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
 
 - (void)setUpMyQuestionsViewController {
     MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestionsViewController"];
-    [self addChildViewController:myQuestionsVC];
-    myQuestionsVC.view.frame = self.view.frame;
-    [self.view addSubview:myQuestionsVC.view];
-    [myQuestionsVC didMoveToParentViewController:self];
     self.questionsViewController = myQuestionsVC;
 }
 
 - (void)setUpProfileViewController {
     ProfileViewController *profileVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
-    [self addChildViewController:profileVC];
-    profileVC.view.frame = self.view.frame;
-    [self.view addSubview:profileVC.view];
-    [profileVC didMoveToParentViewController:self];
     self.profileViewController = profileVC;
 }
 
 - (void)setUpMenuButton {
-    UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(10.0, 10.0, kBurgerButtonWidth, kBurgerButtonHeight)];
+    UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(10.0, 30.0, kBurgerButtonWidth, kBurgerButtonHeight)];
     menuButton.backgroundColor = [UIColor whiteColor];
+    [menuButton.imageView setClipsToBounds:YES];
     [menuButton setImage:[UIImage imageNamed:@"guy.jpeg"] forState:UIControlStateNormal];
     menuButton.layer.cornerRadius = 5.0;
     menuButton.contentMode = UIViewContentModeScaleAspectFit;
     [self.topViewController.view addSubview:menuButton];
     [menuButton addTarget:self action:@selector(burgerMenuButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     self.burgerMenuButton = menuButton;
+    
 }
 
 - (void)burgerMenuButtonPressed:(UIButton *)sender {
@@ -170,6 +166,7 @@ NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
         
         [self.burgerMenuButton removeFromSuperview];
         [viewController.view addSubview:self.burgerMenuButton];
+        self.topViewController = viewController;
         
         [UIView animateWithDuration:kBurgerMenuAnimationTime animations:^{
             viewController.view.center = self.view.center;
@@ -177,6 +174,13 @@ NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
             [viewController.view addGestureRecognizer:self.panRecognizer];
         }];
     }];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController *viewController = self.viewControllers[indexPath.row];
+    if (![self.topViewController isEqual:viewController]) {
+        [self switchToViewController:viewController];
+    }
 }
 
 @end

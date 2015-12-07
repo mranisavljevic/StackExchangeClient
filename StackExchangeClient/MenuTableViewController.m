@@ -8,7 +8,7 @@
 
 #import "MenuTableViewController.h"
 
-@interface MenuTableViewController () <UITableViewDelegate>
+@interface MenuTableViewController ()
 
 @end
 
@@ -21,12 +21,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - UITableViewDelegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
 }
 
 @end
