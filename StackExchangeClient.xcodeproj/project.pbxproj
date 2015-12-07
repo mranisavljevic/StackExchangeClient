@@ -19,6 +19,7 @@
 		90A5FE1A1C161F3600B5C908 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE191C161F3600B5C908 /* SearchViewController.m */; };
 		90A5FE1D1C161F4900B5C908 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE1C1C161F4900B5C908 /* MyQuestionsViewController.m */; };
 		90A5FE201C161F5500B5C908 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE1F1C161F5500B5C908 /* ProfileViewController.m */; };
+		90A5FE221C16260100B5C908 /* guy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 90A5FE211C16260100B5C908 /* guy.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		90A5FE1C1C161F4900B5C908 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
 		90A5FE1E1C161F5500B5C908 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		90A5FE1F1C161F5500B5C908 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		90A5FE211C16260100B5C908 /* guy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guy.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		908573711C161D8000342584 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				90A5FE211C16260100B5C908 /* guy.jpeg */,
 				9085737D1C161D8000342584 /* Assets.xcassets */,
 				908573721C161D8000342584 /* main.m */,
 				908573821C161D8000342584 /* Info.plist */,
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				908573811C161D8000342584 /* LaunchScreen.storyboard in Resources */,
+				90A5FE221C16260100B5C908 /* guy.jpeg in Resources */,
 				9085737E1C161D8000342584 /* Assets.xcassets in Resources */,
 				9085737C1C161D8000342584 /* Main.storyboard in Resources */,
 			);

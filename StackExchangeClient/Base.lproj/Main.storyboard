@@ -8,7 +8,7 @@
         <!--Burger Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="BurgerMenu" id="BYZ-38-t0r" customClass="BurgerMenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BurgerMenuViewController" id="BYZ-38-t0r" customClass="BurgerMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,7 +27,7 @@
         <!--Menu Table View Controller-->
         <scene sceneID="g7Z-Oc-35w">
             <objects>
-                <tableViewController storyboardIdentifier="ViewMenu" id="ePD-hV-TTQ" customClass="MenuTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MenuTableViewController" id="ePD-hV-TTQ" customClass="MenuTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2ME-em-fpm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,7 @@
         <!--Search View Controller-->
         <scene sceneID="k3y-iU-B8X">
             <objects>
-                <viewController storyboardIdentifier="Search" id="OcB-Xa-MH4" customClass="SearchViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="OcB-Xa-MH4" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lc1-rd-lhS"/>
                         <viewControllerLayoutGuide type="bottom" id="lxJ-VJ-wDL"/>
@@ -131,7 +131,7 @@
         <!--My Questions View Controller-->
         <scene sceneID="esl-5Q-ZYP">
             <objects>
-                <viewController storyboardIdentifier="MyQuestions" id="ogh-JW-9uq" customClass="MyQuestionsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyQuestionsViewController" id="ogh-JW-9uq" customClass="MyQuestionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ddn-we-GgQ"/>
                         <viewControllerLayoutGuide type="bottom" id="96X-54-eKG"/>
@@ -150,7 +150,7 @@
         <!--Profile View Controller-->
         <scene sceneID="ca5-BY-JXa">
             <objects>
-                <viewController storyboardIdentifier="Profile" id="WDk-k0-rho" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="WDk-k0-rho" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ClI-D3-n7Q"/>
                         <viewControllerLayoutGuide type="bottom" id="fXW-a8-jOZ"/>
