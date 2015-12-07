@@ -7,8 +7,27 @@
 //
 
 #import "BurgerMenuViewController.h"
+#import "MenuTableViewController.h"
+#import "SearchViewController.h"
+#import "MyQuestionsViewController.h"
+#import "ProfileViewController.h"
+
+CGFloat const kBurgerMenuOpenScreenDivider = 100.0;
+CGFloat const kBurgerMenuOpenScreenMultiplier = 0.8;
+CGFloat const kBurgerButtonWidth = 20.0;
+CGFloat const kBurgerButtonHeight = 20.0;
+NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
 
 @interface BurgerMenuViewController ()
+
+@property (strong, nonatomic) MenuTableViewController *menuViewController;
+@property (strong, nonatomic) SearchViewController *searchViewController;
+@property (strong, nonatomic) MyQuestionsViewController *questionsViewController;
+@property (strong, nonatomic) ProfileViewController *profileViewController;
+@property (strong, nonatomic) UIViewController *topViewController;
+@property (strong, nonatomic) UIButton *burgerMenuButton;
+@property (strong, nonatomic) UIPanGestureRecognizer *panRecognizer;
+@property (strong, nonatomic) NSArray *viewControllers;
 
 @end
 
@@ -16,22 +35,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setUpViewControllers];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setUpViewControllers {
+    [self setUpMenuViewController];
+    [self setUpSearchViewController];
+    [self setUpMyQuestionsViewController];
+    [self setUpProfileViewController];
 }
-*/
+
+- (void)setUpMenuViewController {
+    
+}
+
+- (void)setUpSearchViewController {
+    
+}
+
+- (void)setUpMyQuestionsViewController {
+    
+}
+
+- (void)setUpProfileViewController {
+    
+}
 
 @end
