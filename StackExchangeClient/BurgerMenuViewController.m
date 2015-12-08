@@ -13,7 +13,7 @@
 #import "ProfileViewController.h"
 
 CGFloat const kBurgerMenuOpenScreenDivider = 3.0;
-CGFloat const kBurgerMenuOpenScreenMultiplier = 2.0;
+CGFloat const kBurgerMenuOpenScreenMultiplier = 2.7;
 CGFloat const kBurgerButtonWidth = 40.0;
 CGFloat const kBurgerButtonHeight = 40.0;
 NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
@@ -89,7 +89,7 @@ NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
     UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(10.0, 30.0, kBurgerButtonWidth, kBurgerButtonHeight)];
     menuButton.backgroundColor = [UIColor whiteColor];
     [menuButton.imageView setClipsToBounds:YES];
-    [menuButton setImage:[UIImage imageNamed:@"guy.jpeg"] forState:UIControlStateNormal];
+    [menuButton setImage:[UIImage imageNamed:@"guy.png"] forState:UIControlStateNormal];
     menuButton.layer.cornerRadius = 5.0;
     menuButton.contentMode = UIViewContentModeScaleAspectFit;
     [self.topViewController.view addSubview:menuButton];
@@ -170,6 +170,7 @@ NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
         
         [UIView animateWithDuration:kBurgerMenuAnimationTime animations:^{
             viewController.view.center = self.view.center;
+            self.burgerMenuButton.userInteractionEnabled = YES;
         } completion:^(BOOL finished) {
             [viewController.view addGestureRecognizer:self.panRecognizer];
         }];
