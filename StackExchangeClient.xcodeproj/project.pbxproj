@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9058DE341C1774C800BCE13B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE331C1774C800BCE13B /* User.m */; };
 		9058DE371C17779100BCE13B /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE361C17779100BCE13B /* Question.m */; };
+		9058DE3B1C177BB600BCE13B /* JSONRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE3A1C177BB600BCE13B /* JSONRequestService.m */; };
 		908573731C161D8000342584 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573721C161D8000342584 /* main.m */; };
 		908573761C161D8000342584 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573751C161D8000342584 /* AppDelegate.m */; };
 		9085737C1C161D8000342584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9085737A1C161D8000342584 /* Main.storyboard */; };
@@ -52,6 +53,9 @@
 		9058DE331C1774C800BCE13B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		9058DE351C17779100BCE13B /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		9058DE361C17779100BCE13B /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		9058DE381C177A5300BCE13B /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9058DE391C177BB600BCE13B /* JSONRequestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRequestService.h; sourceTree = "<group>"; };
+		9058DE3A1C177BB600BCE13B /* JSONRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONRequestService.m; sourceTree = "<group>"; };
 		9085736E1C161D8000342584 /* StackExchangeClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackExchangeClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908573721C161D8000342584 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		908573741C161D8000342584 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 			children = (
 				908573741C161D8000342584 /* AppDelegate.h */,
 				908573751C161D8000342584 /* AppDelegate.m */,
+				9058DE381C177A5300BCE13B /* Constants.h */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -204,16 +209,16 @@
 			children = (
 				90A5FE111C161E9F00B5C908 /* BurgerMenuViewController.h */,
 				90A5FE121C161E9F00B5C908 /* BurgerMenuViewController.m */,
+				90A5FE231C1643EE00B5C908 /* LoginWebViewController.h */,
+				90A5FE241C1643EE00B5C908 /* LoginWebViewController.m */,
 				90A5FE151C161F2300B5C908 /* MenuTableViewController.h */,
 				90A5FE161C161F2300B5C908 /* MenuTableViewController.m */,
-				90A5FE181C161F3600B5C908 /* SearchViewController.h */,
-				90A5FE191C161F3600B5C908 /* SearchViewController.m */,
 				90A5FE1B1C161F4900B5C908 /* MyQuestionsViewController.h */,
 				90A5FE1C1C161F4900B5C908 /* MyQuestionsViewController.m */,
 				90A5FE1E1C161F5500B5C908 /* ProfileViewController.h */,
 				90A5FE1F1C161F5500B5C908 /* ProfileViewController.m */,
-				90A5FE231C1643EE00B5C908 /* LoginWebViewController.h */,
-				90A5FE241C1643EE00B5C908 /* LoginWebViewController.m */,
+				90A5FE181C161F3600B5C908 /* SearchViewController.h */,
+				90A5FE191C161F3600B5C908 /* SearchViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -221,12 +226,14 @@
 		90A5FE2B1C16575300B5C908 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9058DE391C177BB600BCE13B /* JSONRequestService.h */,
+				9058DE3A1C177BB600BCE13B /* JSONRequestService.m */,
 				90A5FE281C16574E00B5C908 /* KeychainService.h */,
 				90A5FE291C16574E00B5C908 /* KeychainService.m */,
-				9058DE321C1774C800BCE13B /* User.h */,
-				9058DE331C1774C800BCE13B /* User.m */,
 				9058DE351C17779100BCE13B /* Question.h */,
 				9058DE361C17779100BCE13B /* Question.m */,
+				9058DE321C1774C800BCE13B /* User.h */,
+				9058DE331C1774C800BCE13B /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -432,6 +439,7 @@
 				9058DE371C17779100BCE13B /* Question.m in Sources */,
 				90A5FE131C161E9F00B5C908 /* BurgerMenuViewController.m in Sources */,
 				908573731C161D8000342584 /* main.m in Sources */,
+				9058DE3B1C177BB600BCE13B /* JSONRequestService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
