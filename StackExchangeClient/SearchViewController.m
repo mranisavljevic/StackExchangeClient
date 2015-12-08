@@ -7,8 +7,15 @@
 //
 
 #import "SearchViewController.h"
+#import "StackOverflowSearchAPIService.h"
+#import "StackOverflowJSONParseSearchService.h"
+#import "Question.h"
 
-@interface SearchViewController ()
+@interface SearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *searchTableView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) NSArray *searchResults;
 
 @end
 
@@ -16,22 +23,55 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.searchTableView.dataSource = self;
+    self.searchTableView.delegate = self;
+    self.searchBar.delegate = self;
+    [self.searchTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setSearchResults:(NSArray *)searchResults {
+    _searchResults = searchResults;
+    [self.searchTableView reloadData];
 }
-*/
+
+#pragma mark - UITableViewDataSource, UITableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return (self.searchResults ? self.searchResults.count : 0);
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    Question *question = self.searchResults[indexPath.row];
+    cell.textLabel.text = question.title;
+    return cell;
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    if (searchBar.text.length > 0) {
+        [StackOverflowSearchAPIService searchQuestionsWithTerm:searchBar.text page:1 completion:^(NSDictionary *dictionary, NSError *error) {
+            if (error) {
+                NSLog(@"%@", error.localizedDescription);
+                return;
+            }
+            [StackOverflowJSONParseSearchService parseQuestionsArrayFromDictionary:dictionary completion:^(NSArray *array, NSError *error) {
+                if (error) {
+                    NSLog(@"%@", error.localizedDescription);
+                    return;
+                }
+                self.searchResults = array;
+            }];
+        }];
+    }
+}
 
 @end

@@ -10,18 +10,6 @@
 
 @interface Question ()
 
-@property int questionId;
-@property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) User *owner;
-@property (strong, nonatomic) NSDate *creationDate;
-@property (strong, nonatomic) NSDate *lastActivityDate;
-@property int viewCount;
-@property int score;
-@property int answerCount;
-@property int acceptedAnswerId;
-@property (strong, nonatomic) NSURL *link;
-@property BOOL isAnswered;
-
 @end
 
 @implementation Question
