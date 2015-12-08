@@ -10,6 +10,7 @@
 #import "StackOverflowSearchAPIService.h"
 #import "StackOverflowJSONParseSearchService.h"
 #import "Question.h"
+#import "SearchTableViewCell.h"
 
 @interface SearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -27,7 +28,8 @@
     self.searchTableView.delegate = self;
     self.searchBar.delegate = self;
     self.searchBar.placeholder = @"Guy";
-    [self.searchTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    UINib *nib = [UINib nibWithNibName:@"SearchTableViewCell" bundle:nil];
+    [self.searchTableView registerNib:nib forCellReuseIdentifier:@"cell"];
     [self searchQuestionsWithSearchTerm:@"Guy" page:1];
 }
 
@@ -63,12 +65,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
+    SearchTableViewCell *cell = (SearchTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     Question *question = self.searchResults[indexPath.row];
-    cell.textLabel.text = question.title;
+    [cell setQuestion:question];
     return cell;
 }
 
