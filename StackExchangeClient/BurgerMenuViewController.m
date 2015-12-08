@@ -99,7 +99,7 @@ NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
 }
 
 - (void)burgerMenuButtonPressed:(UIButton *)sender {
-    [UIView animateWithDuration:kBurgerMenuAnimationTime animations:^{
+    [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.topViewController.view.center = CGPointMake(self.view.center.x * kBurgerMenuOpenScreenMultiplier, self.view.center.y);
     } completion:^(BOOL finished) {
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToCloseMenu:)];
@@ -134,7 +134,7 @@ NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
     }
     if (sender.state == UIGestureRecognizerStateEnded) {
         if (self.topViewController.view.frame.origin.x > self.topViewController.view.frame.size.width / kBurgerMenuOpenScreenDivider) {
-            [UIView animateWithDuration:kBurgerMenuAnimationTime animations:^{
+            [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 self.topViewController.view.center = CGPointMake(self.view.center.x * kBurgerMenuOpenScreenMultiplier, self.view.center.y);
             } completion:^(BOOL finished) {
                 UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToCloseMenu:)];
@@ -142,7 +142,7 @@ NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
                 self.burgerMenuButton.userInteractionEnabled = NO;
             }];
         } else {
-            [UIView animateWithDuration:kBurgerMenuAnimationTime animations:^{
+            [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseIn animations:^{
                 self.topViewController.view.center = self.view.center;
             } completion:^(BOOL finished) {
                 //
@@ -168,7 +168,7 @@ NSTimeInterval const kBurgerMenuAnimationTime = 0.4;
         [viewController.view addSubview:self.burgerMenuButton];
         self.topViewController = viewController;
         
-        [UIView animateWithDuration:kBurgerMenuAnimationTime animations:^{
+        [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:0.9 initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseIn animations:^{
             viewController.view.center = self.view.center;
             self.burgerMenuButton.userInteractionEnabled = YES;
         } completion:^(BOOL finished) {
