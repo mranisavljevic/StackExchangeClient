@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LoginWebViewController.h"
+#import "KeychainService.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"StackExchangeAuthToken"]) {
+//    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"StackExchangeAuthToken"]) {
+//        [self presentLoginViewController];
+//    }
+    if (![KeychainService loadFromKeychain]) {
         [self presentLoginViewController];
     }
     return YES;

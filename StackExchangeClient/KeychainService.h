@@ -10,4 +10,7 @@
 
 @interface KeychainService : NSObject
 
++ (void)save:(NSString *)data;
++ (NSString *)loadFromKeychain;
+
 @end
