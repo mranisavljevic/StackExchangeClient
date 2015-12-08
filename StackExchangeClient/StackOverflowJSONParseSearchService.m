@@ -47,6 +47,12 @@
             [results addObject:question];
         }
     }
+    if (results.count > 0) {
+        completion(results, nil);
+    } else {
+        NSError *error = [NSError errorWithDomain:@"Oh, you are so bad at searching..." code:1 userInfo:nil];
+        completion(nil, error);
+    }
 }
 
 @end

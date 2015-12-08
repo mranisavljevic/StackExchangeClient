@@ -12,6 +12,10 @@
 #import "MyQuestionsViewController.h"
 #import "ProfileViewController.h"
 
+#import "StackOverflowSearchAPIService.h"
+#import "StackOverflowJSONParseSearchService.h"
+#import "Question.h"
+
 CGFloat const kBurgerMenuOpenScreenDivider = 3.0;
 CGFloat const kBurgerMenuOpenScreenMultiplier = 2.7;
 CGFloat const kBurgerButtonWidth = 40.0;
@@ -40,6 +44,16 @@ NSTimeInterval const kBurgerMenuAnimationTime = 1.0;
     
     [self setUpMenuButton];
     [self setUpPanGestureRecognizer];
+    
+    [StackOverflowSearchAPIService searchQuestionsWithTerm:@"Tree" page:1 completion:^(NSDictionary *dictionary, NSError *error) {
+        if (dictionary) {
+            [StackOverflowJSONParseSearchService parseQuestionsArrayFromDictionary:dictionary completion:^(NSArray *array, NSError *error) {
+                if (array) {
+                    NSLog(@"Array count: %li", array.count);
+                }
+            }];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
