@@ -22,6 +22,7 @@
 		90A5FE251C1643EE00B5C908 /* LoginWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE241C1643EE00B5C908 /* LoginWebViewController.m */; };
 		90A5FE271C1653F000B5C908 /* guy.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A5FE261C1653F000B5C908 /* guy.png */; };
 		90A5FE2A1C16574E00B5C908 /* KeychainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE291C16574E00B5C908 /* KeychainService.m */; };
+		E50E2F1F5A053F12ACDFA39C /* libPods-StackExchangeClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0878A962063E14F7DCCE4C2F /* libPods-StackExchangeClient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0878A962063E14F7DCCE4C2F /* libPods-StackExchangeClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StackExchangeClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D5E1849DB874361CE89067E /* Pods-StackExchangeClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackExchangeClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-StackExchangeClient/Pods-StackExchangeClient.release.xcconfig"; sourceTree = "<group>"; };
+		71CD3B7C84AD564E76AEDC09 /* Pods-StackExchangeClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackExchangeClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StackExchangeClient/Pods-StackExchangeClient.debug.xcconfig"; sourceTree = "<group>"; };
 		9085736E1C161D8000342584 /* StackExchangeClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackExchangeClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908573721C161D8000342584 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		908573741C161D8000342584 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50E2F1F5A053F12ACDFA39C /* libPods-StackExchangeClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		612DC402B509309D12C8F54D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71CD3B7C84AD564E76AEDC09 /* Pods-StackExchangeClient.debug.xcconfig */,
+				5D5E1849DB874361CE89067E /* Pods-StackExchangeClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		908573651C161D8000342584 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +119,8 @@
 				9085738A1C161D8000342584 /* StackExchangeClientTests */,
 				908573951C161D8000342584 /* StackExchangeClientUITests */,
 				9085736F1C161D8000342584 /* Products */,
+				612DC402B509309D12C8F54D /* Pods */,
+				BC509B25B96B3C6FB7354F39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +221,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		BC509B25B96B3C6FB7354F39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0878A962063E14F7DCCE4C2F /* libPods-StackExchangeClient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9085739B1C161D8000342584 /* Build configuration list for PBXNativeTarget "StackExchangeClient" */;
 			buildPhases = (
+				AF047EE72945B850BB778E3D /* Check Pods Manifest.lock */,
 				9085736A1C161D8000342584 /* Sources */,
 				9085736B1C161D8000342584 /* Frameworks */,
 				9085736C1C161D8000342584 /* Resources */,
+				80186253E0ACC1F3B9D54394 /* Embed Pods Frameworks */,
+				DB47B6D55104B1F55061F77B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -330,6 +357,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80186253E0ACC1F3B9D54394 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StackExchangeClient/Pods-StackExchangeClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF047EE72945B850BB778E3D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB47B6D55104B1F55061F77B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StackExchangeClient/Pods-StackExchangeClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9085736A1C161D8000342584 /* Sources */ = {
@@ -483,6 +558,7 @@
 		};
 		9085739C1C161D8000342584 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71CD3B7C84AD564E76AEDC09 /* Pods-StackExchangeClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StackExchangeClient/Info.plist;
@@ -494,6 +570,7 @@
 		};
 		9085739D1C161D8000342584 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D5E1849DB874361CE89067E /* Pods-StackExchangeClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StackExchangeClient/Info.plist;

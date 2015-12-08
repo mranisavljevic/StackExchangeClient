@@ -4,7 +4,8 @@
 # use_frameworks!
 
 target 'StackExchangeClient' do
-
+platform :ios, '7.0'
+pod "AFNetworking", "~> 2.0"
 end
 
 target 'StackExchangeClientTests' do
