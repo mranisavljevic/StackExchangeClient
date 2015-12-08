@@ -18,9 +18,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"StackExchangeAuthToken"]) {
-//        [self presentLoginViewController];
-//    }
     if (![KeychainService loadFromKeychain]) {
         [self presentLoginViewController];
     }

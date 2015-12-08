@@ -47,7 +47,8 @@ NSString const *accessGroup = @"MyService";
     if (resultData) {
         contentsOfKeychain = [NSString stringWithUTF8String:[resultData bytes]];
     } else {
-        NSLog(@"Nothing was retrieved from the keychain.  Status code %d",(int)status);
+        NSError *noResultFound = [NSError errorWithDomain:@"StackExchangeClient" code:1 userInfo:nil];
+        NSLog(@"Nothing was retrieved from the keychain.  Error code %li. Status %i.",noResultFound.code, (int)status);
     }
     return contentsOfKeychain;
     

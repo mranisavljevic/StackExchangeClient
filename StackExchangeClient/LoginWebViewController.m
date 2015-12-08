@@ -45,7 +45,6 @@ NSString const *kStackExchangeRedirictURI = @"https://stackexchange.com/oauth/lo
         NSArray *description = [url.description componentsSeparatedByString:@"access_token="];
         NSString *authTokenAndExpiration = description.lastObject;
         NSString *authToken = [authTokenAndExpiration componentsSeparatedByString:@"&"].firstObject;
-//        [[NSUserDefaults standardUserDefaults] setObject:authToken forKey:@"StackExchangeAuthToken"];
         [KeychainService save:authToken];
         if (self.completion) {
             self.completion();
