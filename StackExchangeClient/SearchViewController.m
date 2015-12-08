@@ -26,7 +26,9 @@
     self.searchTableView.dataSource = self;
     self.searchTableView.delegate = self;
     self.searchBar.delegate = self;
+    self.searchBar.placeholder = @"Guy";
     [self.searchTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self searchQuestionsWithSearchTerm:@"Guy" page:1];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,6 +38,22 @@
 - (void)setSearchResults:(NSArray *)searchResults {
     _searchResults = searchResults;
     [self.searchTableView reloadData];
+}
+
+- (void)searchQuestionsWithSearchTerm:(NSString *)searchTerm page:(int)page {
+    [StackOverflowSearchAPIService searchQuestionsWithTerm:searchTerm page:page completion:^(NSDictionary *dictionary, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+            return;
+        }
+        [StackOverflowJSONParseSearchService parseQuestionsArrayFromDictionary:dictionary completion:^(NSArray *array, NSError *error) {
+            if (error) {
+                NSLog(@"%@", error.localizedDescription);
+                return;
+            }
+            self.searchResults = array;
+        }];
+    }];
 }
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate
@@ -58,19 +76,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     if (searchBar.text.length > 0) {
-        [StackOverflowSearchAPIService searchQuestionsWithTerm:searchBar.text page:1 completion:^(NSDictionary *dictionary, NSError *error) {
-            if (error) {
-                NSLog(@"%@", error.localizedDescription);
-                return;
-            }
-            [StackOverflowJSONParseSearchService parseQuestionsArrayFromDictionary:dictionary completion:^(NSArray *array, NSError *error) {
-                if (error) {
-                    NSLog(@"%@", error.localizedDescription);
-                    return;
-                }
-                self.searchResults = array;
-            }];
-        }];
+        [self searchQuestionsWithSearchTerm:searchBar.text page:1];
     }
 }
 

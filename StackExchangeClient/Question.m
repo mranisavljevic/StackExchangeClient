@@ -8,10 +8,6 @@
 
 #import "Question.h"
 
-@interface Question ()
-
-@end
-
 @implementation Question
 
 - (id)initWithQuestionId:(int)questionId title:(NSString *)title owner:(User *)owner creationDate:(NSDate *)creationDate lastActivityDate:(NSDate *)lastActivityDate viewCount:(int)viewCount score:(int)score answerCount:(int)answerCount acceptedAnswerId:(int)acceptedAnswerId link:(NSURL *)link isAnswered:(BOOL)isAnswered {
