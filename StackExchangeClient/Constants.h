@@ -15,4 +15,9 @@ typedef void(^kNSDictionaryCompletionHandler)(NSDictionary *dictionary, NSError 
 typedef void(^kNSArrayCompletionHandler)(NSArray *array, NSError *error);
 typedef void(^kUIImageCompletionHandler)(UIImage *image, NSError *error);
 
+// pastel pink color: FFE5D4
+// pastel green color: F2FFF8
+// pastel blue color: B4EFFF
+// pastel yellow color: EFFFBC
+
 #endif /* Constants_h */

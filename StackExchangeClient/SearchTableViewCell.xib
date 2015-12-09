@@ -32,7 +32,7 @@
                     </label>
                 </subviews>
                 <animations/>
-                <color key="backgroundColor" red="0.94763574240000004" green="1" blue="0.97311961560000004" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.94901960784313721" green="1" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="ngR-fu-nqe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2uZ-sF-A0A"/>
                     <constraint firstAttribute="bottomMargin" secondItem="FU6-ft-Ocq" secondAttribute="bottom" id="CYH-Xi-lT4"/>
