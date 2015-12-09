@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" red="0.93725490196078431" green="1" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="1" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="1" green="0.8980392157" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.94901960780000005" green="1" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
@@ -53,7 +53,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <color key="backgroundColor" red="0.70588235290000001" green="0.93725490199999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -75,7 +75,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <color key="backgroundColor" red="0.70588235290000001" green="0.93725490199999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -97,7 +97,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <color key="backgroundColor" red="0.70588235290000001" green="0.93725490199999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -182,6 +182,21 @@
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.8980392157" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maybe it's time you asked some questions..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlo-2D-1Uu">
+                                <rect key="frame" x="120.5" y="316" width="360" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="T6C-HQ-e4b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="T6C-HQ-e4b"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.70588235290000001" green="0.93725490199999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -189,11 +204,23 @@
                             <constraint firstItem="OTD-X1-WKn" firstAttribute="top" secondItem="ddn-we-GgQ" secondAttribute="bottom" constant="60" id="0US-1F-PGC"/>
                             <constraint firstItem="96X-54-eKG" firstAttribute="top" secondItem="OTD-X1-WKn" secondAttribute="bottom" id="0Xq-YA-rW3"/>
                             <constraint firstItem="OTD-X1-WKn" firstAttribute="leading" secondItem="Z0B-6A-zex" secondAttribute="leading" id="0x9-zi-Jj4"/>
+                            <constraint firstItem="Qlo-2D-1Uu" firstAttribute="centerX" secondItem="OTD-X1-WKn" secondAttribute="centerX" id="DKL-Dl-REz"/>
                             <constraint firstAttribute="trailing" secondItem="OTD-X1-WKn" secondAttribute="trailing" id="Mqj-B2-t9d"/>
+                            <constraint firstItem="Qlo-2D-1Uu" firstAttribute="leading" secondItem="OTD-X1-WKn" secondAttribute="trailing" id="OxO-DM-3cd"/>
+                            <constraint firstItem="Qlo-2D-1Uu" firstAttribute="centerY" secondItem="OTD-X1-WKn" secondAttribute="centerY" id="S7v-3V-akQ"/>
+                            <constraint firstItem="Qlo-2D-1Uu" firstAttribute="leading" secondItem="OTD-X1-WKn" secondAttribute="trailing" id="WTg-wa-fKQ"/>
+                            <constraint firstItem="Qlo-2D-1Uu" firstAttribute="width" secondItem="OTD-X1-WKn" secondAttribute="width" multiplier="0.6" id="kRR-PU-wjv"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OxO-DM-3cd"/>
+                                <exclude reference="WTg-wa-fKQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="myQuestionsTableView" destination="OTD-X1-WKn" id="woT-qn-Oas"/>
+                        <outlet property="noQuestionsWarningLabel" destination="Qlo-2D-1Uu" id="bMk-4y-9Mb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwI-l9-nbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,72 +240,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sdb-LY-dkB">
-                                <rect key="frame" x="104" y="108" width="392" height="392"/>
+                                <rect key="frame" x="104" y="113" width="392" height="392"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Sdb-LY-dkB" secondAttribute="height" multiplier="1:1" id="aTx-Ym-SKm"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6m-8H-t9s">
-                                <rect key="frame" x="20" y="80" width="560" height="20.5"/>
+                                <rect key="frame" x="20" y="80" width="560" height="25"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="tTz-GW-GtB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYI-Rh-rba">
-                                <rect key="frame" x="295" y="559.5" width="10.5" height="20.5"/>
+                                <rect key="frame" x="294" y="563" width="11.5" height="17"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1l-pw-hc4">
-                                <rect key="frame" x="369.5" y="559.5" width="10.5" height="20.5"/>
+                                <rect key="frame" x="373" y="563" width="11.5" height="17"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2p-je-06h">
-                                <rect key="frame" x="220.5" y="559.5" width="10.5" height="20.5"/>
+                                <rect key="frame" x="214" y="563" width="11.5" height="17"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reputation: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERT-zL-VaY">
-                                <rect key="frame" x="20" y="530.5" width="560" height="20.5"/>
+                                <rect key="frame" x="20" y="535" width="560" height="22"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="U5k-AW-mPZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bronze" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOy-Su-Dgy">
-                                <rect key="frame" x="199.5" y="519" width="54" height="20.5"/>
+                                <rect key="frame" x="190" y="526" width="59.5" height="17"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQs-Vz-3iv">
-                                <rect key="frame" x="273.5" y="519" width="54" height="20.5"/>
+                                <rect key="frame" x="270" y="526" width="59.5" height="17"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3b-oD-Al6">
-                                <rect key="frame" x="347.5" y="519" width="54" height="20.5"/>
+                                <rect key="frame" x="349" y="526" width="59.5" height="17"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Badges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLM-Cz-jCQ">
-                                <rect key="frame" x="271.5" y="490" width="58" height="20.5"/>
+                                <rect key="frame" x="268" y="495.5" width="63" height="22"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="BYZ-0q-sDJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

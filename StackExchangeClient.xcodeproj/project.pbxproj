@@ -20,6 +20,7 @@
 		9058DE511C17EA1B00BCE13B /* StackOverflowMyUserProfileAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE501C17EA1B00BCE13B /* StackOverflowMyUserProfileAPIService.m */; };
 		9058DE541C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE531C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.m */; };
 		9058DE571C17EE4C00BCE13B /* MyUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE561C17EE4C00BCE13B /* MyUser.m */; };
+		9058DE5A1C18004600BCE13B /* NSObject+UIColorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE591C18004600BCE13B /* NSObject+UIColorExtension.m */; };
 		908573731C161D8000342584 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573721C161D8000342584 /* main.m */; };
 		908573761C161D8000342584 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573751C161D8000342584 /* AppDelegate.m */; };
 		9085737C1C161D8000342584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9085737A1C161D8000342584 /* Main.storyboard */; };
@@ -84,6 +85,8 @@
 		9058DE531C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflowJSONParseMyUserService.m; sourceTree = "<group>"; };
 		9058DE551C17EE4C00BCE13B /* MyUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUser.h; sourceTree = "<group>"; };
 		9058DE561C17EE4C00BCE13B /* MyUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUser.m; sourceTree = "<group>"; };
+		9058DE581C18004600BCE13B /* NSObject+UIColorExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+UIColorExtension.h"; sourceTree = "<group>"; };
+		9058DE591C18004600BCE13B /* NSObject+UIColorExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+UIColorExtension.m"; sourceTree = "<group>"; };
 		9085736E1C161D8000342584 /* StackExchangeClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackExchangeClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908573721C161D8000342584 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		908573741C161D8000342584 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -266,20 +269,22 @@
 				90A5FE291C16574E00B5C908 /* KeychainService.m */,
 				9058DE551C17EE4C00BCE13B /* MyUser.h */,
 				9058DE561C17EE4C00BCE13B /* MyUser.m */,
-				9058DE4C1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.h */,
-				9058DE4D1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m */,
 				9058DE351C17779100BCE13B /* Question.h */,
 				9058DE361C17779100BCE13B /* Question.m */,
 				9058DE3F1C17811E00BCE13B /* StackOverflowJSONParseSearchService.h */,
 				9058DE401C17811E00BCE13B /* StackOverflowJSONParseSearchService.m */,
 				9058DE521C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.h */,
 				9058DE531C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.m */,
+				9058DE4C1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.h */,
+				9058DE4D1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m */,
 				9058DE4F1C17EA1B00BCE13B /* StackOverflowMyUserProfileAPIService.h */,
 				9058DE501C17EA1B00BCE13B /* StackOverflowMyUserProfileAPIService.m */,
 				9058DE3C1C177E7900BCE13B /* StackOverflowSearchAPIService.h */,
 				9058DE3D1C177E7900BCE13B /* StackOverflowSearchAPIService.m */,
 				9058DE321C1774C800BCE13B /* User.h */,
 				9058DE331C1774C800BCE13B /* User.m */,
+				9058DE581C18004600BCE13B /* NSObject+UIColorExtension.h */,
+				9058DE591C18004600BCE13B /* NSObject+UIColorExtension.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 				90A5FE1D1C161F4900B5C908 /* MyQuestionsViewController.m in Sources */,
 				9058DE3E1C177E7900BCE13B /* StackOverflowSearchAPIService.m in Sources */,
 				9058DE411C17811E00BCE13B /* StackOverflowJSONParseSearchService.m in Sources */,
+				9058DE5A1C18004600BCE13B /* NSObject+UIColorExtension.m in Sources */,
 				90A5FE1A1C161F3600B5C908 /* SearchViewController.m in Sources */,
 				90A5FE201C161F5500B5C908 /* ProfileViewController.m in Sources */,
 				9058DE4A1C17A77000BCE13B /* MyQuestionsTableViewCell.m in Sources */,

@@ -16,6 +16,7 @@
 @interface MyQuestionsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myQuestionsTableView;
+@property (weak, nonatomic) IBOutlet UILabel *noQuestionsWarningLabel;
 @property (strong, nonatomic) NSArray *myQuestions;
 
 @end
@@ -28,6 +29,7 @@
     self.myQuestionsTableView.delegate = self;
     self.myQuestionsTableView.estimatedRowHeight = 100;
     self.myQuestionsTableView.rowHeight = UITableViewAutomaticDimension;
+    self.noQuestionsWarningLabel.hidden = YES;
     UINib *nib = [UINib nibWithNibName:@"MyQuestionsTableViewCell" bundle:nil];
     [self.myQuestionsTableView registerNib:nib forCellReuseIdentifier:@"cell"];
     [self fetchMyQuestions];
@@ -46,14 +48,16 @@
     [StackOverflowMyQuestionsAPIService fetchMyQuestions:1 completion:^(NSDictionary *dictionary, NSError *error) {
         if (error) {
             NSLog(@"You have not asked any questions, or there is some other problem.");
-//            [self setMyQuestions:@[[[Question alloc] initWithQuestionId:1 title:@"Maybe it's time you asked a question..." owner:[[User alloc] initWithDisplayName:@"Me" userId:1 reputation:1 userType:@"A nobody" acceptRate:1 profileImageURL:nil link:nil] creationDate:[NSDate date] lastActivityDate:[NSDate date] viewCount:0 score:0 answerCount:0 acceptedAnswerId:0 link:nil isAnswered:NO]]];
+            self.noQuestionsWarningLabel.hidden = NO;
             return;
         }
         [StackOverflowJSONParseSearchService parseQuestionsArrayFromDictionary:dictionary completion:^(NSArray *array, NSError *error) {
             if (error) {
                 NSLog(@"There was some problem parsing...");
+                self.noQuestionsWarningLabel.hidden = NO;
                 return;
             }
+            self.noQuestionsWarningLabel.hidden = YES;
             [self setMyQuestions:array];
         }];
     }];

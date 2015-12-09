@@ -27,6 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.profileImageView setClipsToBounds:YES];
+    self.profileImageView.layer.cornerRadius = 15.0;
     [self loadMyUser];
 }
 
