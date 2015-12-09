@@ -45,21 +45,14 @@
 }
 
 - (void)searchQuestionsWithSearchTerm:(NSString *)searchTerm page:(int)page {
-//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oh no!" message:@"There were no results. Try something else?" preferredStyle:UIAlertControllerStyleAlert];
-//    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-//    [alertController addAction:okAction];
     [StackOverflowSearchAPIService searchQuestionsWithTerm:searchTerm page:page completion:^(NSDictionary *dictionary, NSError *error) {
         if (error) {
             NSLog(@"%@", error.localizedDescription);
-            if (![searchTerm isEqualToString:@"Guy"]) {
-//                [self presentViewController:alertController animated:YES completion:nil];
-            }
             return;
         }
         [StackOverflowJSONParseSearchService parseQuestionsArrayFromDictionary:dictionary completion:^(NSArray *array, NSError *error) {
             if (error) {
                 NSLog(@"%@", error.localizedDescription);
-//                [self presentViewController:alertController animated:YES completion:nil];
                 return;
             }
             self.searchResults = array;
