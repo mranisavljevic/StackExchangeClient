@@ -26,6 +26,8 @@
     [super viewDidLoad];
     self.searchTableView.dataSource = self;
     self.searchTableView.delegate = self;
+    self.searchTableView.estimatedRowHeight = 10;
+    self.searchTableView.rowHeight = UITableViewAutomaticDimension;
     self.searchBar.delegate = self;
     self.searchBar.placeholder = @"Guy";
     UINib *nib = [UINib nibWithNibName:@"SearchTableViewCell" bundle:nil];
@@ -68,6 +70,7 @@
     SearchTableViewCell *cell = (SearchTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     Question *question = self.searchResults[indexPath.row];
     [cell setQuestion:question];
+    cell.layer.cornerRadius = 10.0;
     return cell;
 }
 

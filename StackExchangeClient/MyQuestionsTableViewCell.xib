@@ -15,28 +15,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="105.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pZ-Yb-9aK">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pZ-Yb-9aK">
                         <rect key="frame" x="8" y="8" width="304" height="24.5"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creation date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ga-9r-gvb">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creation date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ga-9r-gvb">
                         <rect key="frame" x="8" y="40.5" width="304" height="20.5"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c0-bS-yEf">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c0-bS-yEf">
                         <rect key="frame" x="8" y="69" width="152" height="20.5"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udN-IE-akR">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udN-IE-akR">
                         <rect key="frame" x="160" y="69" width="152" height="20.5"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -45,6 +45,7 @@
                     </label>
                 </subviews>
                 <animations/>
+                <color key="backgroundColor" red="0.93725490199999995" green="1" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="3c0-bS-yEf" firstAttribute="top" secondItem="5ga-9r-gvb" secondAttribute="bottom" constant="8" id="40u-M6-K4o"/>
                     <constraint firstAttribute="trailingMargin" secondItem="3pZ-Yb-9aK" secondAttribute="trailing" id="B8o-t8-74M"/>
@@ -63,6 +64,12 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="answerCountLabel" destination="udN-IE-akR" id="FVj-0N-YdD"/>
+                <outlet property="creationDateLabel" destination="5ga-9r-gvb" id="8Lm-8d-4k6"/>
+                <outlet property="titleLabel" destination="3pZ-Yb-9aK" id="MO8-ad-m2Q"/>
+                <outlet property="viewsCountLabel" destination="3c0-bS-yEf" id="uCb-bR-E6j"/>
+            </connections>
             <point key="canvasLocation" x="280" y="358"/>
         </tableViewCell>
     </objects>

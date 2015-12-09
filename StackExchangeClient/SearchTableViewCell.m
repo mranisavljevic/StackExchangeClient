@@ -38,6 +38,7 @@
 
 - (void)awakeFromNib {
     self.profileImageView.layer.cornerRadius = 5.0;
+    self.contentView.layer.cornerRadius = 10.0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

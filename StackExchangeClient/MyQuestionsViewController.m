@@ -10,6 +10,8 @@
 #import "StackOverflowMyQuestionsAPIService.h"
 #import "StackOverflowJSONParseSearchService.h"
 #import "MyQuestionsTableViewCell.h"
+#import "Question.h"
+#import "User.h"
 
 @interface MyQuestionsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -24,6 +26,8 @@
     [super viewDidLoad];
     self.myQuestionsTableView.dataSource = self;
     self.myQuestionsTableView.delegate = self;
+    self.myQuestionsTableView.estimatedRowHeight = 100;
+    self.myQuestionsTableView.rowHeight = UITableViewAutomaticDimension;
     UINib *nib = [UINib nibWithNibName:@"MyQuestionsTableViewCell" bundle:nil];
     [self.myQuestionsTableView registerNib:nib forCellReuseIdentifier:@"cell"];
     [self fetchMyQuestions];
@@ -42,6 +46,7 @@
     [StackOverflowMyQuestionsAPIService fetchMyQuestions:1 completion:^(NSDictionary *dictionary, NSError *error) {
         if (error) {
             NSLog(@"You have not asked any questions, or there is some other problem.");
+            [self setMyQuestions:@[[[Question alloc] initWithQuestionId:1 title:@"Maybe it's time you asked a question..." owner:[[User alloc] initWithDisplayName:@"Me" userId:1 reputation:1 userType:@"A nobody" acceptRate:1 profileImageURL:nil link:nil] creationDate:[NSDate date] lastActivityDate:[NSDate date] viewCount:0 score:0 answerCount:0 acceptedAnswerId:0 link:nil isAnswered:NO]]];
             return;
         }
         [StackOverflowJSONParseSearchService parseQuestionsArrayFromDictionary:dictionary completion:^(NSArray *array, NSError *error) {
@@ -64,6 +69,7 @@
     MyQuestionsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     Question *question = (Question *)self.myQuestions[indexPath.row];
     [cell setQuestion:question];
+    cell.layer.cornerRadius = 10.0;
     return cell;
 }
 

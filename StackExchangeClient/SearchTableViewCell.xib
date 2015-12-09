@@ -21,6 +21,7 @@
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ngR-fu-nqe" secondAttribute="height" multiplier="1:1" id="Z5H-sW-sXY"/>
+                            <constraint firstAttribute="height" constant="43.5" id="qvi-gb-TzL"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FU6-ft-Ocq">
@@ -43,6 +44,11 @@
                     <constraint firstItem="FU6-ft-Ocq" firstAttribute="leading" secondItem="ngR-fu-nqe" secondAttribute="trailing" constant="8" symbolic="YES" id="b7j-lL-P7N"/>
                     <constraint firstAttribute="topMargin" secondItem="FU6-ft-Ocq" secondAttribute="top" id="kDb-5S-h3q"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="XkD-n6-Gvf"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <animations/>
             <connections>
