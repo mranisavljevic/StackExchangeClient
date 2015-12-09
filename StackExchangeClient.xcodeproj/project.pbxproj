@@ -14,6 +14,9 @@
 		9058DE411C17811E00BCE13B /* StackOverflowJSONParseSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE401C17811E00BCE13B /* StackOverflowJSONParseSearchService.m */; };
 		9058DE451C179B0900BCE13B /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE431C179B0900BCE13B /* SearchTableViewCell.m */; };
 		9058DE461C179B0900BCE13B /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9058DE441C179B0900BCE13B /* SearchTableViewCell.xib */; };
+		9058DE4A1C17A77000BCE13B /* MyQuestionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE481C17A77000BCE13B /* MyQuestionsTableViewCell.m */; };
+		9058DE4B1C17A77000BCE13B /* MyQuestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9058DE491C17A77000BCE13B /* MyQuestionsTableViewCell.xib */; };
+		9058DE4E1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE4D1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m */; };
 		908573731C161D8000342584 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573721C161D8000342584 /* main.m */; };
 		908573761C161D8000342584 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573751C161D8000342584 /* AppDelegate.m */; };
 		9085737C1C161D8000342584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9085737A1C161D8000342584 /* Main.storyboard */; };
@@ -67,6 +70,11 @@
 		9058DE421C179B0900BCE13B /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
 		9058DE431C179B0900BCE13B /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 		9058DE441C179B0900BCE13B /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		9058DE471C17A77000BCE13B /* MyQuestionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsTableViewCell.h; sourceTree = "<group>"; };
+		9058DE481C17A77000BCE13B /* MyQuestionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsTableViewCell.m; sourceTree = "<group>"; };
+		9058DE491C17A77000BCE13B /* MyQuestionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQuestionsTableViewCell.xib; sourceTree = "<group>"; };
+		9058DE4C1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverflowMyQuestionsAPIService.h; sourceTree = "<group>"; };
+		9058DE4D1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflowMyQuestionsAPIService.m; sourceTree = "<group>"; };
 		9085736E1C161D8000342584 /* StackExchangeClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackExchangeClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908573721C161D8000342584 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		908573741C161D8000342584 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -200,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				9085737A1C161D8000342584 /* Main.storyboard */,
+				9058DE491C17A77000BCE13B /* MyQuestionsTableViewCell.xib */,
 				9058DE441C179B0900BCE13B /* SearchTableViewCell.xib */,
 				9085737F1C161D8000342584 /* LaunchScreen.storyboard */,
 			);
@@ -227,6 +236,8 @@
 				90A5FE161C161F2300B5C908 /* MenuTableViewController.m */,
 				90A5FE1B1C161F4900B5C908 /* MyQuestionsViewController.h */,
 				90A5FE1C1C161F4900B5C908 /* MyQuestionsViewController.m */,
+				9058DE471C17A77000BCE13B /* MyQuestionsTableViewCell.h */,
+				9058DE481C17A77000BCE13B /* MyQuestionsTableViewCell.m */,
 				90A5FE1E1C161F5500B5C908 /* ProfileViewController.h */,
 				90A5FE1F1C161F5500B5C908 /* ProfileViewController.m */,
 				9058DE421C179B0900BCE13B /* SearchTableViewCell.h */,
@@ -244,6 +255,8 @@
 				9058DE3A1C177BB600BCE13B /* JSONRequestService.m */,
 				90A5FE281C16574E00B5C908 /* KeychainService.h */,
 				90A5FE291C16574E00B5C908 /* KeychainService.m */,
+				9058DE4C1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.h */,
+				9058DE4D1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m */,
 				9058DE351C17779100BCE13B /* Question.h */,
 				9058DE361C17779100BCE13B /* Question.m */,
 				9058DE3F1C17811E00BCE13B /* StackOverflowJSONParseSearchService.h */,
@@ -375,6 +388,7 @@
 				9085737C1C161D8000342584 /* Main.storyboard in Resources */,
 				90A5FE271C1653F000B5C908 /* guy.png in Resources */,
 				9058DE461C179B0900BCE13B /* SearchTableViewCell.xib in Resources */,
+				9058DE4B1C17A77000BCE13B /* MyQuestionsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,10 +470,12 @@
 				9058DE411C17811E00BCE13B /* StackOverflowJSONParseSearchService.m in Sources */,
 				90A5FE1A1C161F3600B5C908 /* SearchViewController.m in Sources */,
 				90A5FE201C161F5500B5C908 /* ProfileViewController.m in Sources */,
+				9058DE4A1C17A77000BCE13B /* MyQuestionsTableViewCell.m in Sources */,
 				90A5FE2A1C16574E00B5C908 /* KeychainService.m in Sources */,
 				9058DE371C17779100BCE13B /* Question.m in Sources */,
 				90A5FE131C161E9F00B5C908 /* BurgerMenuViewController.m in Sources */,
 				908573731C161D8000342584 /* main.m in Sources */,
+				9058DE4E1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m in Sources */,
 				9058DE3B1C177BB600BCE13B /* JSONRequestService.m in Sources */,
 				9058DE451C179B0900BCE13B /* SearchTableViewCell.m in Sources */,
 			);

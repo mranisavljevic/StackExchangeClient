@@ -7,8 +7,14 @@
 //
 
 #import "MyQuestionsViewController.h"
+#import "StackOverflowMyQuestionsAPIService.h"
+#import "StackOverflowJSONParseSearchService.h"
+#import "MyQuestionsTableViewCell.h"
 
-@interface MyQuestionsViewController ()
+@interface MyQuestionsViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *myQuestionsTableView;
+@property (strong, nonatomic) NSArray *myQuestions;
 
 @end
 
@@ -16,22 +22,49 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.myQuestionsTableView.dataSource = self;
+    self.myQuestionsTableView.delegate = self;
+    UINib *nib = [UINib nibWithNibName:@"MyQuestionsTableViewCell" bundle:nil];
+    [self.myQuestionsTableView registerNib:nib forCellReuseIdentifier:@"cell"];
+    [self fetchMyQuestions];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setMyQuestions:(NSArray *)myQuestions {
+    _myQuestions = myQuestions;
+    [self.myQuestionsTableView reloadData];
 }
-*/
+
+- (void)fetchMyQuestions {
+    [StackOverflowMyQuestionsAPIService fetchMyQuestions:1 completion:^(NSDictionary *dictionary, NSError *error) {
+        if (error) {
+            NSLog(@"You have not asked any questions, or there is some other problem.");
+            return;
+        }
+        [StackOverflowJSONParseSearchService parseQuestionsArrayFromDictionary:dictionary completion:^(NSArray *array, NSError *error) {
+            if (error) {
+                NSLog(@"There was some problem parsing...");
+                return;
+            }
+            [self setMyQuestions:array];
+        }];
+    }];
+}
+
+#pragma mark - UITableViewDataSource, UITableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return (self.myQuestions.count > 0 ? self.myQuestions.count : 0);
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MyQuestionsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    Question *question = (Question *)self.myQuestions[indexPath.row];
+    [cell setQuestion:question];
+    return cell;
+}
 
 @end

@@ -173,9 +173,25 @@
                     <view key="view" contentMode="scaleToFill" id="Z0B-6A-zex">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OTD-X1-WKn">
+                                <rect key="frame" x="0.0" y="80" width="600" height="520"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.8980392157" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.70588235290000001" green="0.93725490199999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OTD-X1-WKn" firstAttribute="top" secondItem="ddn-we-GgQ" secondAttribute="bottom" constant="60" id="0US-1F-PGC"/>
+                            <constraint firstItem="96X-54-eKG" firstAttribute="top" secondItem="OTD-X1-WKn" secondAttribute="bottom" id="0Xq-YA-rW3"/>
+                            <constraint firstItem="OTD-X1-WKn" firstAttribute="leading" secondItem="Z0B-6A-zex" secondAttribute="leading" id="0x9-zi-Jj4"/>
+                            <constraint firstAttribute="trailing" secondItem="OTD-X1-WKn" secondAttribute="trailing" id="Mqj-B2-t9d"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myQuestionsTableView" destination="OTD-X1-WKn" id="woT-qn-Oas"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwI-l9-nbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
