@@ -13,6 +13,8 @@
 #import "ProfileViewController.h"
 #import "NSObject+UIColorExtension.h"
 
+#import "CodeChallengeBinaryTree.h"
+
 CGFloat const kBurgerMenuOpenScreenDivider = 3.0;
 CGFloat const kBurgerMenuOpenScreenMultiplier = 2.7;
 CGFloat const kBurgerButtonWidth = 40.0;
@@ -34,13 +36,18 @@ NSTimeInterval const kBurgerMenuAnimationTime = 1.0;
 
 @implementation BurgerMenuViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setUpViewControllers];
     
     [self setUpMenuButton];
-    [self setUpPanGestureRecognizer];}
+    [self setUpPanGestureRecognizer];
+    
+    [CodeChallengeBinaryTree testBinaryTree];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

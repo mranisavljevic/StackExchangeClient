@@ -40,15 +40,9 @@
                     <constraint firstAttribute="leadingMargin" secondItem="ngR-fu-nqe" secondAttribute="leading" id="DCG-Up-moE"/>
                     <constraint firstAttribute="topMargin" secondItem="ngR-fu-nqe" secondAttribute="top" id="E3v-CJ-zYr"/>
                     <constraint firstAttribute="trailingMargin" secondItem="FU6-ft-Ocq" secondAttribute="trailing" id="L9k-jL-v7s"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="ngR-fu-nqe" secondAttribute="bottom" id="XkD-n6-Gvf"/>
                     <constraint firstItem="FU6-ft-Ocq" firstAttribute="leading" secondItem="ngR-fu-nqe" secondAttribute="trailing" constant="8" symbolic="YES" id="b7j-lL-P7N"/>
                     <constraint firstAttribute="topMargin" secondItem="FU6-ft-Ocq" secondAttribute="top" id="kDb-5S-h3q"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="XkD-n6-Gvf"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <animations/>
             <connections>
