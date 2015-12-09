@@ -11,7 +11,7 @@
 
 @implementation StackOverflowSearchAPIService
 
-+ (void)searchQuestionsWithTerm:(NSString *)searchTerm page:(int)page completion:(kNSDictionaryCompletionHandler)completion {
++ (void)searchQuestionsWithTerm:(NSString *)searchTerm page:(int)page completion:(kIdCompletionHandler)completion {
     NSString *searchURL = @"https://api.stackexchange.com/2.2/search";
     
     NSString *pageNumber = (page < 1 ? pageNumber = @"1" : [NSString stringWithFormat:@"%i", page]);
@@ -23,14 +23,20 @@
     [parameters setObject:@"activity" forKey:@"sort"];
     [parameters setObject:@"desc" forKey:@"order"];
 //    NSLog(@"%@?page=%@&intitle=%@&site=stackoverflow&sort=activity&order=desc", searchURL, [parameters objectForKey:@"page"], [parameters objectForKey:@"intitle"]);
-    [JSONRequestService GETRequestWithURLString:searchURL parameters:parameters completion:^(NSData *data, NSError *error) {
+    [JSONRequestService GETRequestWithURLString:searchURL parameters:parameters completion:^(id responseObject, NSError *error) {
         if (error) {
             completion(nil, error);
             return;
         }
-        NSDictionary *results = (NSDictionary *)data;
-        completion(results, nil);
-        return;
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *results = (NSDictionary *)responseObject;
+            completion(results, nil);
+            return;
+        } else {
+            NSError *wrongTypeError = [NSError errorWithDomain:[NSString stringWithFormat:@"GET request returned unexpected datatype: %@", [responseObject class]] code:11 userInfo:nil];
+            completion(nil, wrongTypeError);
+            return;
+        }
     }];
 }
 

@@ -11,6 +11,6 @@
 
 @interface JSONRequestService : NSObject
 
-+ (void)GETRequestWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters completion:(kNSDataCompletionHandler)completion;
++ (void)GETRequestWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters completion:(kIdCompletionHandler)completion;
 
 @end

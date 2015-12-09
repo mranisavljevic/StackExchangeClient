@@ -11,7 +11,7 @@
 
 @implementation JSONRequestService
 
-+ (void)GETRequestWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters completion:(kNSDataCompletionHandler)completion {
++ (void)GETRequestWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters completion:(kIdCompletionHandler)completion {
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -30,8 +30,8 @@
     }];
     
     [manager GET:urlString parameters:parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        NSData *data = (NSData *)responseObject;
-        completion(data, nil);
+//        NSData *data = (NSData *)responseObject;
+        completion(responseObject, nil);
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         completion(nil, error);
     }];

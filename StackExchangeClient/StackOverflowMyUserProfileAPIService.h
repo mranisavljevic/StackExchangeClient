@@ -11,6 +11,6 @@
 
 @interface StackOverflowMyUserProfileAPIService : NSObject
 
-+ (void)fetchMyProfileInfoWithCompletion:(kNSDictionaryCompletionHandler)completion;
++ (void)fetchMyProfileInfoWithCompletion:(kIdCompletionHandler)completion;
 
 @end

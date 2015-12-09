@@ -11,6 +11,6 @@
 
 @interface StackOverflowSearchAPIService : NSObject
 
-+ (void)searchQuestionsWithTerm:(NSString *)searchTerm page:(int)page completion:(kNSDictionaryCompletionHandler)completion;
++ (void)searchQuestionsWithTerm:(NSString *)searchTerm page:(int)page completion:(kIdCompletionHandler)completion;
 
 @end

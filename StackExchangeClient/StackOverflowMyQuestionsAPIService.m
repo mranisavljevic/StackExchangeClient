@@ -27,14 +27,20 @@
     
 //    NSLog(@"%@?access_token=%@&key=7YhjPpWyOPT97JvXSMUjwA((&page=1&site=stackoverflow&sort=activity&order=desc", searchURL, [KeychainService loadFromKeychain]);
     
-    [JSONRequestService GETRequestWithURLString:searchURL parameters:parameters completion:^(NSData *data, NSError *error) {
+    [JSONRequestService GETRequestWithURLString:searchURL parameters:parameters completion:^(id responseObject, NSError *error) {
         if (error) {
             completion(nil, error);
             return;
         }
-        NSDictionary *results = (NSDictionary *)data;
-        completion(results, nil);
-        return;
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *results = (NSDictionary *)responseObject;
+            completion(results, nil);
+            return;
+        } else {
+            NSError *wrongTypeError = [NSError errorWithDomain:[NSString stringWithFormat:@"GET request returned unexpected datatype: %@", [responseObject class]] code:11 userInfo:nil];
+            completion(nil, wrongTypeError);
+            return;
+        }
     }];
 }
 

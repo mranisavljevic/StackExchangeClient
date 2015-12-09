@@ -16,5 +16,6 @@ typedef void(^kNSDictionaryCompletionHandler)(NSDictionary *dictionary, NSError 
 typedef void(^kNSArrayCompletionHandler)(NSArray *array, NSError *error);
 typedef void(^kUIImageCompletionHandler)(UIImage *image, NSError *error);
 typedef void(^kMyUserCompletionHandler)(MyUser *myUser, NSError *error);
+typedef void(^kIdCompletionHandler)(id responseObject, NSError *error);
 
 #endif /* Constants_h */
