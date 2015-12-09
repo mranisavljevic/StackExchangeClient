@@ -86,7 +86,7 @@ NSTimeInterval const kBurgerMenuAnimationTime = 1.0;
 
 - (void)setUpMenuButton {
     UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(10.0, 30.0, kBurgerButtonWidth, kBurgerButtonHeight)];
-    menuButton.backgroundColor = [UIColor whiteColor];
+    menuButton.backgroundColor = [UIColor colorWithRed:0.937 green:1.000 blue:0.737 alpha:1.000];
     [menuButton.imageView setClipsToBounds:YES];
     [menuButton setImage:[UIImage imageNamed:@"guy.png"] forState:UIControlStateNormal];
     menuButton.layer.cornerRadius = 5.0;

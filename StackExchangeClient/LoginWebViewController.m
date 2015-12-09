@@ -42,6 +42,7 @@ NSString const *kStackExchangeRedirictURI = @"https://stackexchange.com/oauth/lo
 
     
     if ([url.description containsString:@"access_token"]) {
+        NSLog(@"%@", url.description);
         NSArray *description = [url.description componentsSeparatedByString:@"access_token="];
         NSString *authTokenAndExpiration = description.lastObject;
         NSString *authToken = [authTokenAndExpiration componentsSeparatedByString:@"&"].firstObject;
