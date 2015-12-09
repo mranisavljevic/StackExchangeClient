@@ -22,7 +22,7 @@
     [parameters setObject:@"stackoverflow" forKey:@"site"];
     [parameters setObject:@"activity" forKey:@"sort"];
     [parameters setObject:@"desc" forKey:@"order"];
-    
+//    NSLog(@"%@?page=%@&intitle=%@&site=stackoverflow&sort=activity&order=desc", searchURL, [parameters objectForKey:@"page"], [parameters objectForKey:@"intitle"]);
     [JSONRequestService GETRequestWithURLString:searchURL parameters:parameters completion:^(NSData *data, NSError *error) {
         if (error) {
             completion(nil, error);
