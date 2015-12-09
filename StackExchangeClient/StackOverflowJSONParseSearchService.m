@@ -40,9 +40,9 @@
             NSString *answerCount = [item objectForKey:@"answer_count"];
             NSString *acceptedAnswerId = [item objectForKey:@"accepted_answer_id"];
             NSURL *questionLink = [NSURL URLWithString:[item objectForKey:@"link"]];
-            BOOL isAnswered = [item objectForKey:@"is_answered"];
+            NSString *isAnswered = [item objectForKey:@"is_answered"];
             
-            Question *question = [[Question alloc] initWithQuestionId:questionId.intValue title:title owner:owner creationDate:creationDate lastActivityDate:lastActivityDate viewCount:viewCount.intValue score:score.intValue answerCount:answerCount.intValue acceptedAnswerId:acceptedAnswerId.intValue link:questionLink isAnswered:isAnswered];
+            Question *question = [[Question alloc] initWithQuestionId:questionId.intValue title:title owner:owner creationDate:creationDate lastActivityDate:lastActivityDate viewCount:viewCount.intValue score:score.intValue answerCount:answerCount.intValue acceptedAnswerId:acceptedAnswerId.intValue link:questionLink isAnswered:isAnswered.boolValue];
             
             [results addObject:question];
         }

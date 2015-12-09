@@ -22,7 +22,7 @@
     [parameters setObject:@"reputation" forKey:@"sort"];
     [parameters setObject:@"desc" forKey:@"order"];
     
-    NSLog(@"%@?access_token=%@&site=stackoverflow&sort=reputation&order=desc", searchURL, [KeychainService loadFromKeychain]);
+//    NSLog(@"%@?access_token=%@&site=stackoverflow&sort=reputation&order=desc", searchURL, [KeychainService loadFromKeychain]);
     
     [JSONRequestService GETRequestWithURLString:searchURL parameters:parameters completion:^(NSData *data, NSError *error) {
         if (error) {
