@@ -24,6 +24,7 @@
 		906EAE801C18CF3C00EE558E /* CodeChallengeBinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 906EAE7F1C18CF3C00EE558E /* CodeChallengeBinaryTree.m */; };
 		906EAE831C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 906EAE821C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.m */; };
 		906EAE8B1C18FC2100EE558E /* SwiftQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906EAE8A1C18FC2100EE558E /* SwiftQuestion.swift */; };
+		906EAE8E1C1936BF00EE558E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 906EAE8D1C1936BF00EE558E /* WebViewController.m */; };
 		908573731C161D8000342584 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573721C161D8000342584 /* main.m */; };
 		908573761C161D8000342584 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573751C161D8000342584 /* AppDelegate.m */; };
 		9085737C1C161D8000342584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9085737A1C161D8000342584 /* Main.storyboard */; };
@@ -96,6 +97,8 @@
 		906EAE821C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeChallengeBinaryTreeNode.m; sourceTree = "<group>"; };
 		906EAE851C18F2C800EE558E /* StackExchangeClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StackExchangeClient-Bridging-Header.h"; sourceTree = "<group>"; };
 		906EAE8A1C18FC2100EE558E /* SwiftQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftQuestion.swift; sourceTree = "<group>"; };
+		906EAE8C1C1936BF00EE558E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		906EAE8D1C1936BF00EE558E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		9085736E1C161D8000342584 /* StackExchangeClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackExchangeClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908573721C161D8000342584 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		908573741C161D8000342584 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -277,6 +280,8 @@
 				9058DE431C179B0900BCE13B /* SearchTableViewCell.m */,
 				90A5FE181C161F3600B5C908 /* SearchViewController.h */,
 				90A5FE191C161F3600B5C908 /* SearchViewController.m */,
+				906EAE8C1C1936BF00EE558E /* WebViewController.h */,
+				906EAE8D1C1936BF00EE558E /* WebViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 				90A5FE131C161E9F00B5C908 /* BurgerMenuViewController.m in Sources */,
 				906EAE8B1C18FC2100EE558E /* SwiftQuestion.swift in Sources */,
 				908573731C161D8000342584 /* main.m in Sources */,
+				906EAE8E1C1936BF00EE558E /* WebViewController.m in Sources */,
 				9058DE4E1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m in Sources */,
 				9058DE3B1C177BB600BCE13B /* JSONRequestService.m in Sources */,
 				9058DE451C179B0900BCE13B /* SearchTableViewCell.m in Sources */,
@@ -673,6 +679,7 @@
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = StackExchangeClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creeperspeak.StackExchangeClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -690,6 +697,7 @@
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = StackExchangeClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creeperspeak.StackExchangeClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";

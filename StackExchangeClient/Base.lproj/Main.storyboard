@@ -159,11 +159,78 @@
                     <connections>
                         <outlet property="searchBar" destination="FgA-ls-HuR" id="oMF-O2-Ery"/>
                         <outlet property="searchTableView" destination="Dck-Ld-BHo" id="hA3-b2-lmB"/>
+                        <segue destination="9x0-Xr-EQm" kind="presentation" identifier="WebViewController" id="9vR-cZ-6Ce"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHb-i3-Ptq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1539" y="-198"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="bng-zo-Z6G">
+            <objects>
+                <viewController id="9x0-Xr-EQm" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rfq-cc-YLl"/>
+                        <viewControllerLayoutGuide type="bottom" id="yxK-yS-3gK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8xK-uh-xgL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyR-Fn-sgk">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Cfq-v5-1Ht"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="done" systemItem="done" id="rmv-2x-bFb">
+                                        <color key="tintColor" red="0.70588235290000001" green="0.93725490199999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="doneButtonPressed:" destination="9x0-Xr-EQm" id="eMg-vh-fhY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.97254901959999995" green="1" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGz-pN-YGS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="1" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1sG-M1-LTL"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqs-vP-37U">
+                                <rect key="frame" x="0.0" y="60" width="600" height="496"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dqs-vP-37U" secondAttribute="trailing" id="3z8-Ur-DWo"/>
+                            <constraint firstItem="qyR-Fn-sgk" firstAttribute="top" secondItem="dqs-vP-37U" secondAttribute="bottom" id="5cV-rW-NbS"/>
+                            <constraint firstItem="VGz-pN-YGS" firstAttribute="leading" secondItem="8xK-uh-xgL" secondAttribute="leading" id="AhU-Ee-NSn"/>
+                            <constraint firstItem="yxK-yS-3gK" firstAttribute="top" secondItem="qyR-Fn-sgk" secondAttribute="bottom" id="acY-JD-TKS"/>
+                            <constraint firstItem="dqs-vP-37U" firstAttribute="top" secondItem="VGz-pN-YGS" secondAttribute="bottom" id="ehG-sg-VQX"/>
+                            <constraint firstAttribute="trailing" secondItem="VGz-pN-YGS" secondAttribute="trailing" id="gg0-pr-reT"/>
+                            <constraint firstItem="VGz-pN-YGS" firstAttribute="top" secondItem="8xK-uh-xgL" secondAttribute="top" id="s1s-dA-PXg"/>
+                            <constraint firstItem="dqs-vP-37U" firstAttribute="leading" secondItem="8xK-uh-xgL" secondAttribute="leading" id="tQ7-Pk-8Gm"/>
+                            <constraint firstAttribute="trailing" secondItem="qyR-Fn-sgk" secondAttribute="trailing" id="urp-eA-RRC"/>
+                            <constraint firstItem="qyR-Fn-sgk" firstAttribute="leading" secondItem="8xK-uh-xgL" secondAttribute="leading" id="wPH-9e-9hY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="dqs-vP-37U" id="roc-0i-lQA"/>
+                        <outlet property="webViewCanvas" destination="8xK-uh-xgL" id="BbN-p4-i3W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfN-hO-i2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2187" y="-198"/>
         </scene>
         <!--My Questions View Controller-->
         <scene sceneID="esl-5Q-ZYP">

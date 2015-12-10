@@ -11,6 +11,8 @@
 #import "StackOverflowJSONParseSearchService.h"
 #import "Question.h"
 #import "SearchTableViewCell.h"
+#import "WebViewController.h"
+@import SafariServices;
 
 @interface SearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -60,6 +62,25 @@
     }];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"WebViewController"]) {
+        if ([segue.destinationViewController isKindOfClass:[WebViewController class]]) {
+            WebViewController *webViewController = (WebViewController *)segue.destinationViewController;
+            if ([sender isKindOfClass:[NSURL class]]) {
+                NSURL *url = (NSURL *)sender;
+                webViewController.url = url;
+            }
+            webViewController.completion = ^() {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            };
+        }
+    }
+}
+
+- (void)presentWKWebView:(NSURL *)url {
+    [self performSegueWithIdentifier:@"WebViewController" sender:url];
+}
+
 #pragma mark - UITableViewDataSource, UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -72,6 +93,16 @@
     [cell setQuestion:question];
     cell.layer.cornerRadius = 10.0;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Question *question = self.searchResults[indexPath.row];
+    if ([SFSafariViewController class]) {
+        SFSafariViewController *safariViewController = [[SFSafariViewController alloc] initWithURL:question.link entersReaderIfAvailable:NO];
+        [self presentViewController:safariViewController animated:YES completion:nil];
+    } else {
+        [self presentWKWebView:question.link];
+    }
 }
 
 #pragma mark - UISearchBarDelegate
