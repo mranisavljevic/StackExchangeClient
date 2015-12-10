@@ -9,7 +9,7 @@
 #import "SearchViewController.h"
 #import "StackOverflowSearchAPIService.h"
 #import "StackOverflowJSONParseSearchService.h"
-#import "Question.h"
+#import "StackexchangeClient-Swift.h"
 #import "SearchTableViewCell.h"
 #import "WebViewController.h"
 @import SafariServices;
@@ -96,14 +96,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SearchTableViewCell *cell = (SearchTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    Question *question = self.searchResults[indexPath.row];
+    SwiftQuestion *question = self.searchResults[indexPath.row];
     [cell setQuestion:question];
     cell.layer.cornerRadius = 10.0;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Question *question = self.searchResults[indexPath.row];
+    SwiftQuestion *question = self.searchResults[indexPath.row];
     if ([SFSafariViewController class]) {
         SFSafariViewController *safariViewController = [[SFSafariViewController alloc] initWithURL:question.link entersReaderIfAvailable:NO];
         [self presentViewController:safariViewController animated:YES completion:nil];

@@ -19,7 +19,7 @@
 
 @implementation SearchTableViewCell
 
-- (void)setQuestion:(Question *)question {
+- (void)setQuestion:(SwiftQuestion *)question {
     self.user = question.owner;
     self.questionTitleLabel.text = question.title;
     if (self.user.profileImage) {
