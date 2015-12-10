@@ -130,6 +130,7 @@
     if (searchBar.text.length > 0) {
         self.page = 1;
         self.searchResults = @[];
+        [searchBar resignFirstResponder];
         [self searchQuestionsWithSearchTerm:searchBar.text page:self.page];
     }
 }
