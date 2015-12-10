@@ -191,6 +191,18 @@
                                             <action selector="doneButtonPressed:" destination="9x0-Xr-EQm" id="eMg-vh-fhY"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Back" id="2E3-jy-kJu">
+                                        <color key="tintColor" red="0.70588235290000001" green="0.93725490199999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="9x0-Xr-EQm" id="ljd-wO-Mo2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Forward" id="weo-FN-Dsz">
+                                        <color key="tintColor" red="0.70588235290000001" green="0.93725490199999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="forwardButtonPressed:" destination="9x0-Xr-EQm" id="vAs-Cu-lD1"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.97254901959999995" green="1" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
@@ -224,6 +236,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="2E3-jy-kJu" id="WlA-OP-6au"/>
+                        <outlet property="forwardButton" destination="weo-FN-Dsz" id="0m0-sS-iup"/>
                         <outlet property="webView" destination="dqs-vP-37U" id="roc-0i-lQA"/>
                     </connections>
                 </viewController>
@@ -287,6 +301,7 @@
                     <connections>
                         <outlet property="myQuestionsTableView" destination="OTD-X1-WKn" id="woT-qn-Oas"/>
                         <outlet property="noQuestionsWarningLabel" destination="Qlo-2D-1Uu" id="bMk-4y-9Mb"/>
+                        <segue destination="9x0-Xr-EQm" kind="presentation" identifier="WebViewController" id="JIG-JM-AsS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwI-l9-nbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -437,4 +452,7 @@
             <point key="canvasLocation" x="1539" y="1105"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JIG-JM-AsS"/>
+    </inferredMetricsTieBreakers>
 </document>

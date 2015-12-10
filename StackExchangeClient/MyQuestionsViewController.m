@@ -12,6 +12,8 @@
 #import "MyQuestionsTableViewCell.h"
 #import "StackExchangeClient-Swift.h"
 #import "User.h"
+#import "WebViewController.h"
+@import SafariServices;
 
 
 @interface MyQuestionsViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -64,6 +66,21 @@
     }];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"WebViewController"]) {
+        if ([segue.destinationViewController isKindOfClass:[WebViewController class]]) {
+            WebViewController *webViewController = (WebViewController *)segue.destinationViewController;
+            if ([sender isKindOfClass:[NSURL class]]) {
+                NSURL *url = (NSURL *)sender;
+                webViewController.url = url;
+            }
+            webViewController.completion = ^() {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            };
+        }
+    }
+}
+
 #pragma mark - UITableViewDataSource, UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -76,6 +93,17 @@
     [cell setQuestion:question];
     cell.layer.cornerRadius = 10.0;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SwiftQuestion *question = (SwiftQuestion *)self.myQuestions[indexPath.row];
+    NSURL *url = (NSURL *)question.link;
+    if ([SFSafariViewController class]) {
+        SFSafariViewController *safariViewController = [[SFSafariViewController alloc] initWithURL:url];
+        [self presentViewController:safariViewController animated:YES completion:nil];
+    } else {
+        [self performSegueWithIdentifier:@"WebViewController" sender:url];
+    }
 }
 
 @end

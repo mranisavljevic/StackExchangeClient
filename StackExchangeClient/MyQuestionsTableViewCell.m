@@ -33,8 +33,8 @@
     _question = question;
     self.titleLabel.text = question.title;
     self.creationDateLabel.text = [NSString stringWithFormat:@"Creation Date: %@", [NSDateFormatter localizedStringFromDate:question.creationDate dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle]];
-    self.viewsCountLabel.text = [NSString stringWithFormat:@"Views: %li",question.viewCount];
-    self.answerCountLabel.text = [NSString stringWithFormat:@"Answers: %li", question.answerCount];
+    self.viewsCountLabel.text = [NSString stringWithFormat:@"Views: %li",(long)question.viewCount];
+    self.answerCountLabel.text = [NSString stringWithFormat:@"Answers: %li", (long)question.answerCount];
 }
 
 @end
