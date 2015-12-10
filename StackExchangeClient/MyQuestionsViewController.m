@@ -10,8 +10,9 @@
 #import "StackOverflowMyQuestionsAPIService.h"
 #import "StackOverflowJSONParseSearchService.h"
 #import "MyQuestionsTableViewCell.h"
-#import "Question.h"
+#import "StackExchangeClient-Swift.h"
 #import "User.h"
+
 
 @interface MyQuestionsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -71,7 +72,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MyQuestionsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    Question *question = (Question *)self.myQuestions[indexPath.row];
+    SwiftQuestion *question = (SwiftQuestion *)self.myQuestions[indexPath.row];
     [cell setQuestion:question];
     cell.layer.cornerRadius = 10.0;
     return cell;

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Question.h"
+#import "StackExchangeClient-Swift.h"
 
 @interface MyQuestionsTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) Question *question;
+@property (strong, nonatomic) SwiftQuestion* question;
 
 @end

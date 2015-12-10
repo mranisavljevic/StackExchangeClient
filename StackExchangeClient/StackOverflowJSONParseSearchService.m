@@ -8,7 +8,7 @@
 
 #import "StackOverflowJSONParseSearchService.h"
 #import "User.h"
-#import "Question.h"
+#import "StackExchangeClient-Swift.h"
 
 @implementation StackOverflowJSONParseSearchService
 
@@ -42,7 +42,8 @@
             NSURL *questionLink = [NSURL URLWithString:[item objectForKey:@"link"]];
             NSString *isAnswered = [item objectForKey:@"is_answered"];
             
-            Question *question = [[Question alloc] initWithQuestionId:questionId.intValue title:title owner:owner creationDate:creationDate lastActivityDate:lastActivityDate viewCount:viewCount.intValue score:score.intValue answerCount:answerCount.intValue acceptedAnswerId:acceptedAnswerId.intValue link:questionLink isAnswered:isAnswered.boolValue];
+//            SwiftQuestion *question = [[SwiftQuestion alloc] initWithQuestionId:questionId.intValue title:title owner:owner creationDate:creationDate lastActivityDate:lastActivityDate viewCount:viewCount.intValue score:score.intValue answerCount:answerCount.intValue acceptedAnswerId:acceptedAnswerId.intValue link:questionLink isAnswered:isAnswered.boolValue];
+            SwiftQuestion *question = [[SwiftQuestion alloc] initWithQuestionId:questionId.intValue title:title owner:owner creationDate:creationDate lastActivityDate:lastActivityDate viewCount:viewCount.intValue score:score.intValue answerCount:answerCount.intValue acceptedAnswerId:acceptedAnswerId.intValue link:questionLink isAnswered:isAnswered.boolValue];
             
             [results addObject:question];
         }

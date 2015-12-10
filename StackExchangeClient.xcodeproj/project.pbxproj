@@ -23,6 +23,7 @@
 		9058DE5A1C18004600BCE13B /* NSObject+UIColorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE591C18004600BCE13B /* NSObject+UIColorExtension.m */; };
 		906EAE801C18CF3C00EE558E /* CodeChallengeBinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 906EAE7F1C18CF3C00EE558E /* CodeChallengeBinaryTree.m */; };
 		906EAE831C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 906EAE821C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.m */; };
+		906EAE8B1C18FC2100EE558E /* SwiftQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906EAE8A1C18FC2100EE558E /* SwiftQuestion.swift */; };
 		908573731C161D8000342584 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573721C161D8000342584 /* main.m */; };
 		908573761C161D8000342584 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573751C161D8000342584 /* AppDelegate.m */; };
 		9085737C1C161D8000342584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9085737A1C161D8000342584 /* Main.storyboard */; };
@@ -93,6 +94,8 @@
 		906EAE7F1C18CF3C00EE558E /* CodeChallengeBinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeChallengeBinaryTree.m; sourceTree = "<group>"; };
 		906EAE811C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeChallengeBinaryTreeNode.h; sourceTree = "<group>"; };
 		906EAE821C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeChallengeBinaryTreeNode.m; sourceTree = "<group>"; };
+		906EAE851C18F2C800EE558E /* StackExchangeClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StackExchangeClient-Bridging-Header.h"; sourceTree = "<group>"; };
+		906EAE8A1C18FC2100EE558E /* SwiftQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftQuestion.swift; sourceTree = "<group>"; };
 		9085736E1C161D8000342584 /* StackExchangeClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackExchangeClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908573721C161D8000342584 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		908573741C161D8000342584 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -289,6 +292,7 @@
 				9058DE561C17EE4C00BCE13B /* MyUser.m */,
 				9058DE351C17779100BCE13B /* Question.h */,
 				9058DE361C17779100BCE13B /* Question.m */,
+				906EAE8A1C18FC2100EE558E /* SwiftQuestion.swift */,
 				9058DE3F1C17811E00BCE13B /* StackOverflowJSONParseSearchService.h */,
 				9058DE401C17811E00BCE13B /* StackOverflowJSONParseSearchService.m */,
 				9058DE521C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.h */,
@@ -303,6 +307,7 @@
 				9058DE331C1774C800BCE13B /* User.m */,
 				9058DE581C18004600BCE13B /* NSObject+UIColorExtension.h */,
 				9058DE591C18004600BCE13B /* NSObject+UIColorExtension.m */,
+				906EAE851C18F2C800EE558E /* StackExchangeClient-Bridging-Header.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				90A5FE2A1C16574E00B5C908 /* KeychainService.m in Sources */,
 				9058DE371C17779100BCE13B /* Question.m in Sources */,
 				90A5FE131C161E9F00B5C908 /* BurgerMenuViewController.m in Sources */,
+				906EAE8B1C18FC2100EE558E /* SwiftQuestion.swift in Sources */,
 				908573731C161D8000342584 /* main.m in Sources */,
 				9058DE4E1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m in Sources */,
 				9058DE3B1C177BB600BCE13B /* JSONRequestService.m in Sources */,
@@ -663,10 +669,15 @@
 			baseConfigurationReference = 71CD3B7C84AD564E76AEDC09 /* Pods-StackExchangeClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = StackExchangeClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creeperspeak.StackExchangeClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StackExchangeClient/StackExchangeClient-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -675,10 +686,14 @@
 			baseConfigurationReference = 5D5E1849DB874361CE89067E /* Pods-StackExchangeClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = StackExchangeClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creeperspeak.StackExchangeClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StackExchangeClient/StackExchangeClient-Bridging-Header.h";
 			};
 			name = Release;
 		};
