@@ -114,11 +114,13 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.searchResults.count) {
-        if (indexPath.row >= self.searchResults.count - 5) {
-            if (self.searchBar.text.length > 0) {
-                [self searchQuestionsWithSearchTerm:self.searchBar.text page:self.page];
-            } else {
-                [self searchQuestionsWithSearchTerm:self.searchBar.placeholder page:self.page];
+        if (self.searchResults.count > 10) {
+            if (indexPath.row >= self.searchResults.count - 5) {
+                if (self.searchBar.text.length > 0) {
+                    [self searchQuestionsWithSearchTerm:self.searchBar.text page:self.page];
+                } else {
+                    [self searchQuestionsWithSearchTerm:self.searchBar.placeholder page:self.page];
+                }
             }
         }
     }
