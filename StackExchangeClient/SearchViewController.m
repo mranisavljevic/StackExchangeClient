@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *searchTableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) NSArray *searchResults;
+@property int page;
 
 @end
 
@@ -32,9 +33,10 @@
     self.searchTableView.rowHeight = UITableViewAutomaticDimension;
     self.searchBar.delegate = self;
     self.searchBar.placeholder = @"Guy";
+    self.page = 1;
     UINib *nib = [UINib nibWithNibName:@"SearchTableViewCell" bundle:nil];
     [self.searchTableView registerNib:nib forCellReuseIdentifier:@"cell"];
-    [self searchQuestionsWithSearchTerm:@"Guy" page:1];
+    [self searchQuestionsWithSearchTerm:@"Guy" page:self.page++];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,7 +44,12 @@
 }
 
 - (void)setSearchResults:(NSArray *)searchResults {
-    _searchResults = searchResults;
+    if (_searchResults) {
+        _searchResults = [_searchResults arrayByAddingObjectsFromArray:searchResults];
+    } else {
+        _searchResults = searchResults;
+    }
+    self.page++;
     [self.searchTableView reloadData];
 }
 
@@ -57,7 +64,7 @@
                 NSLog(@"%@", error.localizedDescription);
                 return;
             }
-            self.searchResults = array;
+            [self setSearchResults:array];
         }];
     }];
 }
@@ -105,11 +112,25 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.searchResults.count) {
+        if (indexPath.row >= self.searchResults.count - 5) {
+            if (self.searchBar.text.length > 0) {
+                [self searchQuestionsWithSearchTerm:self.searchBar.text page:self.page];
+            } else {
+                [self searchQuestionsWithSearchTerm:self.searchBar.placeholder page:self.page];
+            }
+        }
+    }
+}
+
 #pragma mark - UISearchBarDelegate
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     if (searchBar.text.length > 0) {
-        [self searchQuestionsWithSearchTerm:searchBar.text page:1];
+        self.page = 1;
+        self.searchResults = @[];
+        [self searchQuestionsWithSearchTerm:searchBar.text page:self.page];
     }
 }
 
