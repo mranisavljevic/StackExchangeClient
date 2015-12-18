@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9058DE341C1774C800BCE13B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE331C1774C800BCE13B /* User.m */; };
-		9058DE371C17779100BCE13B /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE361C17779100BCE13B /* Question.m */; };
 		9058DE3B1C177BB600BCE13B /* JSONRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE3A1C177BB600BCE13B /* JSONRequestService.m */; };
 		9058DE3E1C177E7900BCE13B /* StackOverflowSearchAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE3D1C177E7900BCE13B /* StackOverflowSearchAPIService.m */; };
 		9058DE411C17811E00BCE13B /* StackOverflowJSONParseSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE401C17811E00BCE13B /* StackOverflowJSONParseSearchService.m */; };
@@ -66,8 +65,6 @@
 		71CD3B7C84AD564E76AEDC09 /* Pods-StackExchangeClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackExchangeClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StackExchangeClient/Pods-StackExchangeClient.debug.xcconfig"; sourceTree = "<group>"; };
 		9058DE321C1774C800BCE13B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		9058DE331C1774C800BCE13B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		9058DE351C17779100BCE13B /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
-		9058DE361C17779100BCE13B /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		9058DE381C177A5300BCE13B /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9058DE391C177BB600BCE13B /* JSONRequestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRequestService.h; sourceTree = "<group>"; };
 		9058DE3A1C177BB600BCE13B /* JSONRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONRequestService.m; sourceTree = "<group>"; };
@@ -295,8 +292,6 @@
 				90A5FE291C16574E00B5C908 /* KeychainService.m */,
 				9058DE551C17EE4C00BCE13B /* MyUser.h */,
 				9058DE561C17EE4C00BCE13B /* MyUser.m */,
-				9058DE351C17779100BCE13B /* Question.h */,
-				9058DE361C17779100BCE13B /* Question.m */,
 				906EAE8A1C18FC2100EE558E /* SwiftQuestion.swift */,
 				9058DE3F1C17811E00BCE13B /* StackOverflowJSONParseSearchService.h */,
 				9058DE401C17811E00BCE13B /* StackOverflowJSONParseSearchService.m */,
@@ -526,7 +521,6 @@
 				9058DE4A1C17A77000BCE13B /* MyQuestionsTableViewCell.m in Sources */,
 				9058DE541C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.m in Sources */,
 				90A5FE2A1C16574E00B5C908 /* KeychainService.m in Sources */,
-				9058DE371C17779100BCE13B /* Question.m in Sources */,
 				90A5FE131C161E9F00B5C908 /* BurgerMenuViewController.m in Sources */,
 				906EAE8B1C18FC2100EE558E /* SwiftQuestion.swift in Sources */,
 				908573731C161D8000342584 /* main.m in Sources */,

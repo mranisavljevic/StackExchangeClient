@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *myQuestionsTableView;
 @property (weak, nonatomic) IBOutlet UILabel *noQuestionsWarningLabel;
 @property (strong, nonatomic) NSArray *myQuestions;
+@property int page;
 
 @end
 
@@ -33,6 +34,7 @@
     self.myQuestionsTableView.estimatedRowHeight = 100;
     self.myQuestionsTableView.rowHeight = UITableViewAutomaticDimension;
     self.noQuestionsWarningLabel.hidden = YES;
+    self.page = 1;
     UINib *nib = [UINib nibWithNibName:@"MyQuestionsTableViewCell" bundle:nil];
     [self.myQuestionsTableView registerNib:nib forCellReuseIdentifier:@"cell"];
     [self fetchMyQuestions];
@@ -48,7 +50,7 @@
 }
 
 - (void)fetchMyQuestions {
-    [StackOverflowMyQuestionsAPIService fetchMyQuestions:1 completion:^(NSDictionary *dictionary, NSError *error) {
+    [StackOverflowMyQuestionsAPIService fetchMyQuestions:self.page completion:^(NSDictionary *dictionary, NSError *error) {
         if (error) {
             NSLog(@"You have not asked any questions, or there is some other problem.");
             self.noQuestionsWarningLabel.hidden = NO;
@@ -62,6 +64,7 @@
             }
             self.noQuestionsWarningLabel.hidden = YES;
             [self setMyQuestions:array];
+            self.page++;
         }];
     }];
 }
@@ -103,6 +106,14 @@
         [self presentViewController:safariViewController animated:YES completion:nil];
     } else {
         [self performSegueWithIdentifier:@"WebViewController" sender:url];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.myQuestions.count > 10) {
+        if (indexPath.row >= self.myQuestions.count - 5) {
+            [self fetchMyQuestions];
+        }
     }
 }
 
