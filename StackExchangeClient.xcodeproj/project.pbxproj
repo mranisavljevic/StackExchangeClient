@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9058DE341C1774C800BCE13B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE331C1774C800BCE13B /* User.m */; };
+		9058DE371C17779100BCE13B /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE361C17779100BCE13B /* Question.m */; };
+		9058DE3B1C177BB600BCE13B /* JSONRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE3A1C177BB600BCE13B /* JSONRequestService.m */; };
+		9058DE3E1C177E7900BCE13B /* StackOverflowSearchAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE3D1C177E7900BCE13B /* StackOverflowSearchAPIService.m */; };
+		9058DE411C17811E00BCE13B /* StackOverflowJSONParseSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE401C17811E00BCE13B /* StackOverflowJSONParseSearchService.m */; };
+		9058DE451C179B0900BCE13B /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE431C179B0900BCE13B /* SearchTableViewCell.m */; };
+		9058DE461C179B0900BCE13B /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9058DE441C179B0900BCE13B /* SearchTableViewCell.xib */; };
+		9058DE4A1C17A77000BCE13B /* MyQuestionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE481C17A77000BCE13B /* MyQuestionsTableViewCell.m */; };
+		9058DE4B1C17A77000BCE13B /* MyQuestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9058DE491C17A77000BCE13B /* MyQuestionsTableViewCell.xib */; };
+		9058DE4E1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE4D1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m */; };
+		9058DE511C17EA1B00BCE13B /* StackOverflowMyUserProfileAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE501C17EA1B00BCE13B /* StackOverflowMyUserProfileAPIService.m */; };
+		9058DE541C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE531C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.m */; };
+		9058DE571C17EE4C00BCE13B /* MyUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE561C17EE4C00BCE13B /* MyUser.m */; };
+		9058DE5A1C18004600BCE13B /* NSObject+UIColorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058DE591C18004600BCE13B /* NSObject+UIColorExtension.m */; };
+		906EAE801C18CF3C00EE558E /* CodeChallengeBinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 906EAE7F1C18CF3C00EE558E /* CodeChallengeBinaryTree.m */; };
+		906EAE831C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 906EAE821C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.m */; };
+		906EAE8B1C18FC2100EE558E /* SwiftQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906EAE8A1C18FC2100EE558E /* SwiftQuestion.swift */; };
+		906EAE8E1C1936BF00EE558E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 906EAE8D1C1936BF00EE558E /* WebViewController.m */; };
 		908573731C161D8000342584 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573721C161D8000342584 /* main.m */; };
 		908573761C161D8000342584 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573751C161D8000342584 /* AppDelegate.m */; };
 		9085737C1C161D8000342584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9085737A1C161D8000342584 /* Main.storyboard */; };
@@ -22,6 +40,7 @@
 		90A5FE251C1643EE00B5C908 /* LoginWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE241C1643EE00B5C908 /* LoginWebViewController.m */; };
 		90A5FE271C1653F000B5C908 /* guy.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A5FE261C1653F000B5C908 /* guy.png */; };
 		90A5FE2A1C16574E00B5C908 /* KeychainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE291C16574E00B5C908 /* KeychainService.m */; };
+		E50E2F1F5A053F12ACDFA39C /* libPods-StackExchangeClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0878A962063E14F7DCCE4C2F /* libPods-StackExchangeClient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +61,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0878A962063E14F7DCCE4C2F /* libPods-StackExchangeClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StackExchangeClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D5E1849DB874361CE89067E /* Pods-StackExchangeClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackExchangeClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-StackExchangeClient/Pods-StackExchangeClient.release.xcconfig"; sourceTree = "<group>"; };
+		71CD3B7C84AD564E76AEDC09 /* Pods-StackExchangeClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackExchangeClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StackExchangeClient/Pods-StackExchangeClient.debug.xcconfig"; sourceTree = "<group>"; };
+		9058DE321C1774C800BCE13B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		9058DE331C1774C800BCE13B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		9058DE351C17779100BCE13B /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		9058DE361C17779100BCE13B /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		9058DE381C177A5300BCE13B /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9058DE391C177BB600BCE13B /* JSONRequestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRequestService.h; sourceTree = "<group>"; };
+		9058DE3A1C177BB600BCE13B /* JSONRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONRequestService.m; sourceTree = "<group>"; };
+		9058DE3C1C177E7900BCE13B /* StackOverflowSearchAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverflowSearchAPIService.h; sourceTree = "<group>"; };
+		9058DE3D1C177E7900BCE13B /* StackOverflowSearchAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflowSearchAPIService.m; sourceTree = "<group>"; };
+		9058DE3F1C17811E00BCE13B /* StackOverflowJSONParseSearchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverflowJSONParseSearchService.h; sourceTree = "<group>"; };
+		9058DE401C17811E00BCE13B /* StackOverflowJSONParseSearchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflowJSONParseSearchService.m; sourceTree = "<group>"; };
+		9058DE421C179B0900BCE13B /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		9058DE431C179B0900BCE13B /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
+		9058DE441C179B0900BCE13B /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		9058DE471C17A77000BCE13B /* MyQuestionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsTableViewCell.h; sourceTree = "<group>"; };
+		9058DE481C17A77000BCE13B /* MyQuestionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsTableViewCell.m; sourceTree = "<group>"; };
+		9058DE491C17A77000BCE13B /* MyQuestionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQuestionsTableViewCell.xib; sourceTree = "<group>"; };
+		9058DE4C1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverflowMyQuestionsAPIService.h; sourceTree = "<group>"; };
+		9058DE4D1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflowMyQuestionsAPIService.m; sourceTree = "<group>"; };
+		9058DE4F1C17EA1B00BCE13B /* StackOverflowMyUserProfileAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverflowMyUserProfileAPIService.h; sourceTree = "<group>"; };
+		9058DE501C17EA1B00BCE13B /* StackOverflowMyUserProfileAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflowMyUserProfileAPIService.m; sourceTree = "<group>"; };
+		9058DE521C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverflowJSONParseMyUserService.h; sourceTree = "<group>"; };
+		9058DE531C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflowJSONParseMyUserService.m; sourceTree = "<group>"; };
+		9058DE551C17EE4C00BCE13B /* MyUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUser.h; sourceTree = "<group>"; };
+		9058DE561C17EE4C00BCE13B /* MyUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUser.m; sourceTree = "<group>"; };
+		9058DE581C18004600BCE13B /* NSObject+UIColorExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+UIColorExtension.h"; sourceTree = "<group>"; };
+		9058DE591C18004600BCE13B /* NSObject+UIColorExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+UIColorExtension.m"; sourceTree = "<group>"; };
+		906EAE7E1C18CF3C00EE558E /* CodeChallengeBinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeChallengeBinaryTree.h; sourceTree = "<group>"; };
+		906EAE7F1C18CF3C00EE558E /* CodeChallengeBinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeChallengeBinaryTree.m; sourceTree = "<group>"; };
+		906EAE811C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeChallengeBinaryTreeNode.h; sourceTree = "<group>"; };
+		906EAE821C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeChallengeBinaryTreeNode.m; sourceTree = "<group>"; };
+		906EAE851C18F2C800EE558E /* StackExchangeClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StackExchangeClient-Bridging-Header.h"; sourceTree = "<group>"; };
+		906EAE8A1C18FC2100EE558E /* SwiftQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftQuestion.swift; sourceTree = "<group>"; };
+		906EAE8C1C1936BF00EE558E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		906EAE8D1C1936BF00EE558E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		9085736E1C161D8000342584 /* StackExchangeClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackExchangeClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908573721C161D8000342584 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		908573741C161D8000342584 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50E2F1F5A053F12ACDFA39C /* libPods-StackExchangeClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +156,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		612DC402B509309D12C8F54D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71CD3B7C84AD564E76AEDC09 /* Pods-StackExchangeClient.debug.xcconfig */,
+				5D5E1849DB874361CE89067E /* Pods-StackExchangeClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		906EAE841C18CF5500EE558E /* Code Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				906EAE7E1C18CF3C00EE558E /* CodeChallengeBinaryTree.h */,
+				906EAE7F1C18CF3C00EE558E /* CodeChallengeBinaryTree.m */,
+				906EAE811C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.h */,
+				906EAE821C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.m */,
+			);
+			name = "Code Challenge";
+			sourceTree = "<group>";
+		};
 		908573651C161D8000342584 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +183,8 @@
 				9085738A1C161D8000342584 /* StackExchangeClientTests */,
 				908573951C161D8000342584 /* StackExchangeClientUITests */,
 				9085736F1C161D8000342584 /* Products */,
+				612DC402B509309D12C8F54D /* Pods */,
+				BC509B25B96B3C6FB7354F39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +206,7 @@
 				90A5FE2B1C16575300B5C908 /* Model */,
 				90A5FE0F1C161E5000B5C908 /* View */,
 				908573711C161D8000342584 /* Supporting Files */,
+				906EAE841C18CF5500EE558E /* Code Challenge */,
 			);
 			path = StackExchangeClient;
 			sourceTree = "<group>";
@@ -163,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				9085737A1C161D8000342584 /* Main.storyboard */,
+				9058DE491C17A77000BCE13B /* MyQuestionsTableViewCell.xib */,
+				9058DE441C179B0900BCE13B /* SearchTableViewCell.xib */,
 				9085737F1C161D8000342584 /* LaunchScreen.storyboard */,
 			);
 			name = View;
@@ -173,6 +256,7 @@
 			children = (
 				908573741C161D8000342584 /* AppDelegate.h */,
 				908573751C161D8000342584 /* AppDelegate.m */,
+				9058DE381C177A5300BCE13B /* Constants.h */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -182,16 +266,22 @@
 			children = (
 				90A5FE111C161E9F00B5C908 /* BurgerMenuViewController.h */,
 				90A5FE121C161E9F00B5C908 /* BurgerMenuViewController.m */,
-				90A5FE151C161F2300B5C908 /* MenuTableViewController.h */,
-				90A5FE161C161F2300B5C908 /* MenuTableViewController.m */,
-				90A5FE181C161F3600B5C908 /* SearchViewController.h */,
-				90A5FE191C161F3600B5C908 /* SearchViewController.m */,
-				90A5FE1B1C161F4900B5C908 /* MyQuestionsViewController.h */,
-				90A5FE1C1C161F4900B5C908 /* MyQuestionsViewController.m */,
-				90A5FE1E1C161F5500B5C908 /* ProfileViewController.h */,
-				90A5FE1F1C161F5500B5C908 /* ProfileViewController.m */,
 				90A5FE231C1643EE00B5C908 /* LoginWebViewController.h */,
 				90A5FE241C1643EE00B5C908 /* LoginWebViewController.m */,
+				90A5FE151C161F2300B5C908 /* MenuTableViewController.h */,
+				90A5FE161C161F2300B5C908 /* MenuTableViewController.m */,
+				90A5FE1B1C161F4900B5C908 /* MyQuestionsViewController.h */,
+				90A5FE1C1C161F4900B5C908 /* MyQuestionsViewController.m */,
+				9058DE471C17A77000BCE13B /* MyQuestionsTableViewCell.h */,
+				9058DE481C17A77000BCE13B /* MyQuestionsTableViewCell.m */,
+				90A5FE1E1C161F5500B5C908 /* ProfileViewController.h */,
+				90A5FE1F1C161F5500B5C908 /* ProfileViewController.m */,
+				9058DE421C179B0900BCE13B /* SearchTableViewCell.h */,
+				9058DE431C179B0900BCE13B /* SearchTableViewCell.m */,
+				90A5FE181C161F3600B5C908 /* SearchViewController.h */,
+				90A5FE191C161F3600B5C908 /* SearchViewController.m */,
+				906EAE8C1C1936BF00EE558E /* WebViewController.h */,
+				906EAE8D1C1936BF00EE558E /* WebViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -199,10 +289,40 @@
 		90A5FE2B1C16575300B5C908 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9058DE391C177BB600BCE13B /* JSONRequestService.h */,
+				9058DE3A1C177BB600BCE13B /* JSONRequestService.m */,
 				90A5FE281C16574E00B5C908 /* KeychainService.h */,
 				90A5FE291C16574E00B5C908 /* KeychainService.m */,
+				9058DE551C17EE4C00BCE13B /* MyUser.h */,
+				9058DE561C17EE4C00BCE13B /* MyUser.m */,
+				9058DE351C17779100BCE13B /* Question.h */,
+				9058DE361C17779100BCE13B /* Question.m */,
+				906EAE8A1C18FC2100EE558E /* SwiftQuestion.swift */,
+				9058DE3F1C17811E00BCE13B /* StackOverflowJSONParseSearchService.h */,
+				9058DE401C17811E00BCE13B /* StackOverflowJSONParseSearchService.m */,
+				9058DE521C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.h */,
+				9058DE531C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.m */,
+				9058DE4C1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.h */,
+				9058DE4D1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m */,
+				9058DE4F1C17EA1B00BCE13B /* StackOverflowMyUserProfileAPIService.h */,
+				9058DE501C17EA1B00BCE13B /* StackOverflowMyUserProfileAPIService.m */,
+				9058DE3C1C177E7900BCE13B /* StackOverflowSearchAPIService.h */,
+				9058DE3D1C177E7900BCE13B /* StackOverflowSearchAPIService.m */,
+				9058DE321C1774C800BCE13B /* User.h */,
+				9058DE331C1774C800BCE13B /* User.m */,
+				9058DE581C18004600BCE13B /* NSObject+UIColorExtension.h */,
+				9058DE591C18004600BCE13B /* NSObject+UIColorExtension.m */,
+				906EAE851C18F2C800EE558E /* StackExchangeClient-Bridging-Header.h */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		BC509B25B96B3C6FB7354F39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0878A962063E14F7DCCE4C2F /* libPods-StackExchangeClient.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,9 +332,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9085739B1C161D8000342584 /* Build configuration list for PBXNativeTarget "StackExchangeClient" */;
 			buildPhases = (
+				AF047EE72945B850BB778E3D /* Check Pods Manifest.lock */,
 				9085736A1C161D8000342584 /* Sources */,
 				9085736B1C161D8000342584 /* Frameworks */,
 				9085736C1C161D8000342584 /* Resources */,
+				80186253E0ACC1F3B9D54394 /* Embed Pods Frameworks */,
+				DB47B6D55104B1F55061F77B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,6 +435,8 @@
 				9085737E1C161D8000342584 /* Assets.xcassets in Resources */,
 				9085737C1C161D8000342584 /* Main.storyboard in Resources */,
 				90A5FE271C1653F000B5C908 /* guy.png in Resources */,
+				9058DE461C179B0900BCE13B /* SearchTableViewCell.xib in Resources */,
+				9058DE4B1C17A77000BCE13B /* MyQuestionsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,20 +456,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		80186253E0ACC1F3B9D54394 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StackExchangeClient/Pods-StackExchangeClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF047EE72945B850BB778E3D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB47B6D55104B1F55061F77B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StackExchangeClient/Pods-StackExchangeClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9085736A1C161D8000342584 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9058DE341C1774C800BCE13B /* User.m in Sources */,
+				906EAE801C18CF3C00EE558E /* CodeChallengeBinaryTree.m in Sources */,
 				90A5FE171C161F2300B5C908 /* MenuTableViewController.m in Sources */,
+				9058DE511C17EA1B00BCE13B /* StackOverflowMyUserProfileAPIService.m in Sources */,
 				90A5FE251C1643EE00B5C908 /* LoginWebViewController.m in Sources */,
+				9058DE571C17EE4C00BCE13B /* MyUser.m in Sources */,
 				908573761C161D8000342584 /* AppDelegate.m in Sources */,
 				90A5FE1D1C161F4900B5C908 /* MyQuestionsViewController.m in Sources */,
+				9058DE3E1C177E7900BCE13B /* StackOverflowSearchAPIService.m in Sources */,
+				9058DE411C17811E00BCE13B /* StackOverflowJSONParseSearchService.m in Sources */,
+				9058DE5A1C18004600BCE13B /* NSObject+UIColorExtension.m in Sources */,
+				906EAE831C18CF4F00EE558E /* CodeChallengeBinaryTreeNode.m in Sources */,
 				90A5FE1A1C161F3600B5C908 /* SearchViewController.m in Sources */,
 				90A5FE201C161F5500B5C908 /* ProfileViewController.m in Sources */,
+				9058DE4A1C17A77000BCE13B /* MyQuestionsTableViewCell.m in Sources */,
+				9058DE541C17ED5B00BCE13B /* StackOverflowJSONParseMyUserService.m in Sources */,
 				90A5FE2A1C16574E00B5C908 /* KeychainService.m in Sources */,
+				9058DE371C17779100BCE13B /* Question.m in Sources */,
 				90A5FE131C161E9F00B5C908 /* BurgerMenuViewController.m in Sources */,
+				906EAE8B1C18FC2100EE558E /* SwiftQuestion.swift in Sources */,
 				908573731C161D8000342584 /* main.m in Sources */,
+				906EAE8E1C1936BF00EE558E /* WebViewController.m in Sources */,
+				9058DE4E1C17A94B00BCE13B /* StackOverflowMyQuestionsAPIService.m in Sources */,
+				9058DE3B1C177BB600BCE13B /* JSONRequestService.m in Sources */,
+				9058DE451C179B0900BCE13B /* SearchTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,23 +672,36 @@
 		};
 		9085739C1C161D8000342584 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71CD3B7C84AD564E76AEDC09 /* Pods-StackExchangeClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = StackExchangeClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creeperspeak.StackExchangeClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StackExchangeClient/StackExchangeClient-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9085739D1C161D8000342584 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D5E1849DB874361CE89067E /* Pods-StackExchangeClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = StackExchangeClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creeperspeak.StackExchangeClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StackExchangeClient/StackExchangeClient-Bridging-Header.h";
 			};
 			name = Release;
 		};

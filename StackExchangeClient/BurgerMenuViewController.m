@@ -11,6 +11,9 @@
 #import "SearchViewController.h"
 #import "MyQuestionsViewController.h"
 #import "ProfileViewController.h"
+#import "NSObject+UIColorExtension.h"
+
+//#import "CodeChallengeBinaryTree.h"
 
 CGFloat const kBurgerMenuOpenScreenDivider = 3.0;
 CGFloat const kBurgerMenuOpenScreenMultiplier = 2.7;
@@ -33,6 +36,8 @@ NSTimeInterval const kBurgerMenuAnimationTime = 1.0;
 
 @implementation BurgerMenuViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -40,6 +45,8 @@ NSTimeInterval const kBurgerMenuAnimationTime = 1.0;
     
     [self setUpMenuButton];
     [self setUpPanGestureRecognizer];
+    
+//    [CodeChallengeBinaryTree testBinaryTree];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,7 +94,7 @@ NSTimeInterval const kBurgerMenuAnimationTime = 1.0;
 
 - (void)setUpMenuButton {
     UIButton *menuButton = [[UIButton alloc] initWithFrame:CGRectMake(10.0, 30.0, kBurgerButtonWidth, kBurgerButtonHeight)];
-    menuButton.backgroundColor = [UIColor whiteColor];
+    menuButton.backgroundColor = [UIColor pastelYellowColor];
     [menuButton.imageView setClipsToBounds:YES];
     [menuButton setImage:[UIImage imageNamed:@"guy.png"] forState:UIControlStateNormal];
     menuButton.layer.cornerRadius = 5.0;

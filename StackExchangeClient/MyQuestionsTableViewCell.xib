@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="106" id="KGk-i7-Jjw" customClass="MyQuestionsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="105.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pZ-Yb-9aK">
+                        <rect key="frame" x="8" y="8" width="304" height="31.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creation date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ga-9r-gvb">
+                        <rect key="frame" x="8" y="47.5" width="304" height="17"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c0-bS-yEf">
+                        <rect key="frame" x="8" y="72.5" width="152" height="17"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udN-IE-akR">
+                        <rect key="frame" x="160" y="72.5" width="152" height="17"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" red="0.93725490199999995" green="1" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="3c0-bS-yEf" firstAttribute="top" secondItem="5ga-9r-gvb" secondAttribute="bottom" constant="8" id="40u-M6-K4o"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="3pZ-Yb-9aK" secondAttribute="trailing" id="B8o-t8-74M"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3c0-bS-yEf" secondAttribute="bottom" constant="8" id="Fjx-hG-T1y"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="3c0-bS-yEf" secondAttribute="leading" id="Frv-ZO-rPj"/>
+                    <constraint firstItem="3c0-bS-yEf" firstAttribute="width" secondItem="udN-IE-akR" secondAttribute="width" id="Ha5-mf-apS"/>
+                    <constraint firstItem="udN-IE-akR" firstAttribute="top" secondItem="5ga-9r-gvb" secondAttribute="bottom" constant="8" id="Hnt-Mr-y7G"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5ga-9r-gvb" secondAttribute="trailing" id="Lhc-zJ-daw"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="udN-IE-akR" secondAttribute="bottom" constant="8" id="OWv-0D-4Kt"/>
+                    <constraint firstItem="5ga-9r-gvb" firstAttribute="top" secondItem="3pZ-Yb-9aK" secondAttribute="bottom" constant="8" id="Qi5-Jb-qDz"/>
+                    <constraint firstItem="udN-IE-akR" firstAttribute="leading" secondItem="3c0-bS-yEf" secondAttribute="trailing" id="TvH-de-wJ8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="udN-IE-akR" secondAttribute="trailing" id="Uvk-ti-Aab"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="3pZ-Yb-9aK" secondAttribute="leading" id="Zy9-nk-ZtQ"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="5ga-9r-gvb" secondAttribute="leading" id="cAX-uk-LyP"/>
+                    <constraint firstAttribute="topMargin" secondItem="3pZ-Yb-9aK" secondAttribute="top" id="hIj-rf-Xwk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="answerCountLabel" destination="udN-IE-akR" id="FVj-0N-YdD"/>
+                <outlet property="creationDateLabel" destination="5ga-9r-gvb" id="8Lm-8d-4k6"/>
+                <outlet property="titleLabel" destination="3pZ-Yb-9aK" id="MO8-ad-m2Q"/>
+                <outlet property="viewsCountLabel" destination="3c0-bS-yEf" id="uCb-bR-E6j"/>
+            </connections>
+            <point key="canvasLocation" x="280" y="358"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -38,9 +38,7 @@ NSString const *kStackExchangeRedirictURI = @"https://stackexchange.com/oauth/lo
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     NSURLRequest *request = navigationAction.request;
     NSURL *url = request.URL;
-    NSLog(@"%@", url.description);
 
-    
     if ([url.description containsString:@"access_token"]) {
         NSArray *description = [url.description componentsSeparatedByString:@"access_token="];
         NSString *authTokenAndExpiration = description.lastObject;
