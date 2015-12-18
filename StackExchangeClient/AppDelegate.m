@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginWebViewController.h"
+#import "KeychainService.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +18,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    if (![KeychainService loadFromKeychain]) {
+        [self presentLoginViewController];
+    }
     return YES;
+}
+
+- (void)presentLoginViewController {
+    UIViewController *rootViewController = self.window.rootViewController;
+    LoginWebViewController *loginVC = [[LoginWebViewController alloc] init];
+    __weak typeof(LoginWebViewController) *weakLoginVC = loginVC;
+    loginVC.completion = ^() {
+        __strong typeof(LoginWebViewController) *strongLoginVC = weakLoginVC;
+        [strongLoginVC.view removeFromSuperview];
+        [strongLoginVC removeFromParentViewController];
+    };
+    [rootViewController addChildViewController:loginVC];
+    [rootViewController.view addSubview:loginVC.view];
+    [loginVC didMoveToParentViewController:rootViewController];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

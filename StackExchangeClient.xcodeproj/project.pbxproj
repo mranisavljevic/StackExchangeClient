@@ -14,6 +14,14 @@
 		908573811C161D8000342584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9085737F1C161D8000342584 /* LaunchScreen.storyboard */; };
 		9085738C1C161D8000342584 /* StackExchangeClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9085738B1C161D8000342584 /* StackExchangeClientTests.m */; };
 		908573971C161D8000342584 /* StackExchangeClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 908573961C161D8000342584 /* StackExchangeClientUITests.m */; };
+		90A5FE131C161E9F00B5C908 /* BurgerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE121C161E9F00B5C908 /* BurgerMenuViewController.m */; };
+		90A5FE171C161F2300B5C908 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE161C161F2300B5C908 /* MenuTableViewController.m */; };
+		90A5FE1A1C161F3600B5C908 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE191C161F3600B5C908 /* SearchViewController.m */; };
+		90A5FE1D1C161F4900B5C908 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE1C1C161F4900B5C908 /* MyQuestionsViewController.m */; };
+		90A5FE201C161F5500B5C908 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE1F1C161F5500B5C908 /* ProfileViewController.m */; };
+		90A5FE251C1643EE00B5C908 /* LoginWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE241C1643EE00B5C908 /* LoginWebViewController.m */; };
+		90A5FE271C1653F000B5C908 /* guy.png in Resources */ = {isa = PBXBuildFile; fileRef = 90A5FE261C1653F000B5C908 /* guy.png */; };
+		90A5FE2A1C16574E00B5C908 /* KeychainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A5FE291C16574E00B5C908 /* KeychainService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,21 @@
 		908573921C161D8000342584 /* StackExchangeClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackExchangeClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		908573961C161D8000342584 /* StackExchangeClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackExchangeClientUITests.m; sourceTree = "<group>"; };
 		908573981C161D8000342584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90A5FE111C161E9F00B5C908 /* BurgerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurgerMenuViewController.h; sourceTree = "<group>"; };
+		90A5FE121C161E9F00B5C908 /* BurgerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerMenuViewController.m; sourceTree = "<group>"; };
+		90A5FE151C161F2300B5C908 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		90A5FE161C161F2300B5C908 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		90A5FE181C161F3600B5C908 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		90A5FE191C161F3600B5C908 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		90A5FE1B1C161F4900B5C908 /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
+		90A5FE1C1C161F4900B5C908 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
+		90A5FE1E1C161F5500B5C908 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		90A5FE1F1C161F5500B5C908 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		90A5FE231C1643EE00B5C908 /* LoginWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginWebViewController.h; sourceTree = "<group>"; };
+		90A5FE241C1643EE00B5C908 /* LoginWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginWebViewController.m; sourceTree = "<group>"; };
+		90A5FE261C1653F000B5C908 /* guy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guy.png; sourceTree = "<group>"; };
+		90A5FE281C16574E00B5C908 /* KeychainService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainService.h; sourceTree = "<group>"; };
+		90A5FE291C16574E00B5C908 /* KeychainService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +121,10 @@
 		908573701C161D8000342584 /* StackExchangeClient */ = {
 			isa = PBXGroup;
 			children = (
-				908573741C161D8000342584 /* AppDelegate.h */,
-				908573751C161D8000342584 /* AppDelegate.m */,
-				9085737A1C161D8000342584 /* Main.storyboard */,
-				9085737D1C161D8000342584 /* Assets.xcassets */,
-				9085737F1C161D8000342584 /* LaunchScreen.storyboard */,
-				908573821C161D8000342584 /* Info.plist */,
+				90A5FE101C161E5600B5C908 /* App */,
+				90A5FE141C161EA800B5C908 /* Controller */,
+				90A5FE2B1C16575300B5C908 /* Model */,
+				90A5FE0F1C161E5000B5C908 /* View */,
 				908573711C161D8000342584 /* Supporting Files */,
 			);
 			path = StackExchangeClient;
@@ -112,7 +133,10 @@
 		908573711C161D8000342584 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				90A5FE261C1653F000B5C908 /* guy.png */,
+				9085737D1C161D8000342584 /* Assets.xcassets */,
 				908573721C161D8000342584 /* main.m */,
+				908573821C161D8000342584 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -133,6 +157,52 @@
 				908573981C161D8000342584 /* Info.plist */,
 			);
 			path = StackExchangeClientUITests;
+			sourceTree = "<group>";
+		};
+		90A5FE0F1C161E5000B5C908 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9085737A1C161D8000342584 /* Main.storyboard */,
+				9085737F1C161D8000342584 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		90A5FE101C161E5600B5C908 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				908573741C161D8000342584 /* AppDelegate.h */,
+				908573751C161D8000342584 /* AppDelegate.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		90A5FE141C161EA800B5C908 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				90A5FE111C161E9F00B5C908 /* BurgerMenuViewController.h */,
+				90A5FE121C161E9F00B5C908 /* BurgerMenuViewController.m */,
+				90A5FE151C161F2300B5C908 /* MenuTableViewController.h */,
+				90A5FE161C161F2300B5C908 /* MenuTableViewController.m */,
+				90A5FE181C161F3600B5C908 /* SearchViewController.h */,
+				90A5FE191C161F3600B5C908 /* SearchViewController.m */,
+				90A5FE1B1C161F4900B5C908 /* MyQuestionsViewController.h */,
+				90A5FE1C1C161F4900B5C908 /* MyQuestionsViewController.m */,
+				90A5FE1E1C161F5500B5C908 /* ProfileViewController.h */,
+				90A5FE1F1C161F5500B5C908 /* ProfileViewController.m */,
+				90A5FE231C1643EE00B5C908 /* LoginWebViewController.h */,
+				90A5FE241C1643EE00B5C908 /* LoginWebViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		90A5FE2B1C16575300B5C908 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				90A5FE281C16574E00B5C908 /* KeychainService.h */,
+				90A5FE291C16574E00B5C908 /* KeychainService.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +311,7 @@
 				908573811C161D8000342584 /* LaunchScreen.storyboard in Resources */,
 				9085737E1C161D8000342584 /* Assets.xcassets in Resources */,
 				9085737C1C161D8000342584 /* Main.storyboard in Resources */,
+				90A5FE271C1653F000B5C908 /* guy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +336,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90A5FE171C161F2300B5C908 /* MenuTableViewController.m in Sources */,
+				90A5FE251C1643EE00B5C908 /* LoginWebViewController.m in Sources */,
 				908573761C161D8000342584 /* AppDelegate.m in Sources */,
+				90A5FE1D1C161F4900B5C908 /* MyQuestionsViewController.m in Sources */,
+				90A5FE1A1C161F3600B5C908 /* SearchViewController.m in Sources */,
+				90A5FE201C161F5500B5C908 /* ProfileViewController.m in Sources */,
+				90A5FE2A1C16574E00B5C908 /* KeychainService.m in Sources */,
+				90A5FE131C161E9F00B5C908 /* BurgerMenuViewController.m in Sources */,
 				908573731C161D8000342584 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +570,7 @@
 				9085739D1C161D8000342584 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9085739E1C161D8000342584 /* Build configuration list for PBXNativeTarget "StackExchangeClientTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +579,7 @@
 				908573A01C161D8000342584 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		908573A11C161D8000342584 /* Build configuration list for PBXNativeTarget "StackExchangeClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +588,7 @@
 				908573A31C161D8000342584 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
